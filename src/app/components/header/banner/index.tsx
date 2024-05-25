@@ -7,7 +7,7 @@ export const Banner = () => {
     const [displayedText, setDisplayedText] = useState<string>('');
     const [typingSpeed, setTypingSpeed] = useState<number>(100 - Math.random() * 50); // Velocidade de digitação aumentada
     const [charIndex, setCharIndex] = useState<number>(1);
-    const rotatingTextOptions: string[] = ["Backend Developer", "Frontend Developer", "Database"];
+    const rotatingTextOptions: string[] = ["Backend Developer ", "Frontend Developer", "Database"];
     const typingInterval: number = 1000; // Intervalo entre cada loop de texto reduzido
 
     useEffect(() => {
@@ -54,7 +54,7 @@ export const Banner = () => {
                     <span
                         className="txt-rotate"
                         data-period="1000"
-                        data-rotate='[ "Backend Developer", "Frontend Developer", "Database" ]'
+                        data-rotate='[ "Backend Developer ", "Frontend Developer", "Database" ]'
                     >
                         <span className="wrap">{displayedText}</span>
                     </span>
