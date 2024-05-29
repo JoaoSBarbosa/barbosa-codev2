@@ -2,7 +2,7 @@ import {ReactNode} from "react";
 import styles from "./RootSectionProps.module.css"
 interface RootSectionProps {
     isDarkBackgroundColor: boolean;
-    isBottomBoxShadow: boolean;
+    isBottomBoxShadow?: boolean;
     children: ReactNode;
 }
 
