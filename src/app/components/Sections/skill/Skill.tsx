@@ -5,7 +5,7 @@ import {RootSection} from "@/app/components/RootSecttion/RootSection";
 import {Layout} from "@/app/components/Layout/Layout";
 import {SkillCardData} from "@/app/data/Skill/SkillCardData";
 
-
+import styles from "../../CardSkill/CardSkill.module.css";
 export const Skill = () => {
     const languages: LanguagesType[] = [
         {id: 1, title: "Java"},
@@ -22,18 +22,21 @@ export const Skill = () => {
 
         <RootSection isDarkBackgroundColor={true} isBottomBoxShadow={true}>
             <Layout>
-               <div className={"flex justify-center"}>
-                   {SkillCardData.map((skill)=>(
-                       <CardSkill
-                           key={skill.id}
-                           pathImage={skill.pathImage}
-                           titleSkill={skill.skillTitle}
-                           description={skill.skillDescription}
-                           languages={skill.languages}
-                           tools={skill.tools}
-                       />
-                   ))}
-               </div>
+                <div className="flex flex-row">
+                    {SkillCardData.map((skill, index) => {
+
+                        return (
+                            <CardSkill
+                                key={skill.id}
+                                pathImage={skill.pathImage}
+                                titleSkill={skill.skillTitle}
+                                description={skill.skillDescription}
+                                languages={skill.languages}
+                                tools={skill.tools}
+                            />
+                        );
+                    })}
+                </div>
             </Layout>
         </RootSection>
     )

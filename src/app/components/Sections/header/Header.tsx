@@ -5,7 +5,7 @@ import {RootSection} from "@/app/components/RootSecttion/RootSection";
 
 export default function Header() {
     return (
-        <RootSection isDarkBackgroundColor={true}>
+        <RootSection>
             <Layout>
                 <Menu/>
                 <Banner/>

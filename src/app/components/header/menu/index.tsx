@@ -12,7 +12,7 @@ export const Menu = () => {
             <nav>
                 <ul className={"flex items-center justify-center gap-6"}>
                     {MenuLinksList.map((link) => (
-                        <li key={link.id} className={"uppercase text-lg py-2 px-4"}>
+                        <li key={link.id} className={"uppercase text-lg py-2 px-4 text-gray-300"}>
                             <Link href={link.href}>
                                 {link.value}
                             </Link>

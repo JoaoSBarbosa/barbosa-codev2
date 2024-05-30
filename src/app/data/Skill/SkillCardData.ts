@@ -38,7 +38,7 @@ export const SkillCardData: SkillCardDataType[] = [
     },
     {
         id: 3,
-        pathImage: "./assets/img/mysql.svg",
+        pathImage: "./assets/img/mysql-plain.svg",
         skillTitle: "Dados",
         skillDescription: "Garantia que os dados não sejam apenas armazenados, mas organizados com lógica.",
         languages: [

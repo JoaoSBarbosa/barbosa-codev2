@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import {RootSection} from "@/app/components/RootSecttion/RootSection";
 import {Layout} from "@/app/components/Layout/Layout";
 
@@ -50,11 +50,9 @@ export const Banner = () => {
     };
 
     return (
-        <RootSection isDarkBackgroundColor={true}>
-            <Layout>
-                <div className="flex flex-col items-center justify-center pt-16 pb-20 ">
-                    <div className={"w-full h-14"}>
-                        <h1 className={"text-5xl text-center"}>
+        <div className="flex text-gray-300 flex-col items-center justify-center pt-16 pb-20 ">
+            <div className={"w-full h-14"}>
+                <h1 className={"text-5xl text-center"}>
                     <span
                         className="txt-rotate"
                         data-period="1000"
@@ -62,23 +60,21 @@ export const Banner = () => {
                     >
                         <span className="wrap">{displayedText}</span>
                     </span>
-                            {" | "}
-                        </h1>
-                    </div>
-                    <div>
-                        <h2 className={"text-xl"}>Sou um profissional dedicado e apaixonado
-                            por desenvolvimento de sistemas.</h2>
-                    </div>
-                    <div>
-                        <img
-                            src="/assets/img/barbosa.png"
-                            alt="João Barbosa"
-                            className="object-cover rounded-full h-96"
-                        />
-                    </div>
-                </div>
+                    {" | "}
+                </h1>
+            </div>
+            <div>
+                <h2 className={"text-xl"}>Sou um profissional dedicado e apaixonado
+                    por desenvolvimento de sistemas.</h2>
+            </div>
+            <div>
+                <img
+                    src="/assets/img/barbosa.png"
+                    alt="João Barbosa"
+                    className="object-cover rounded-full h-96"
+                />
+            </div>
+        </div>
 
-            </Layout>
-        </RootSection>
     );
 };

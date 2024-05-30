@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
 import styles from "./RootSectionProps.module.css"
 interface RootSectionProps {
-    isDarkBackgroundColor: boolean;
+    isDarkBackgroundColor?: boolean;
     isBottomBoxShadow?: boolean;
     children: ReactNode;
 }
@@ -9,7 +9,7 @@ interface RootSectionProps {
 export const RootSection = ({isDarkBackgroundColor,isBottomBoxShadow, children}: RootSectionProps) => {
 
     return (
-        <section className={`${isBottomBoxShadow && styles.bgContainer} ${isDarkBackgroundColor ? "bg-black text-white" : "bg-white text-black"}`}>
+        <section className={`${isBottomBoxShadow && styles.bgContainer} ${isDarkBackgroundColor ? "bg-deep-gray text-white" : ""}`}>
             {children}
         </section>
     )

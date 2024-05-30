@@ -1,6 +1,31 @@
+
+
 .CardContainer {
-    padding: 35px;
-    background: #111;
+    padding: 34px;
+    margin: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
     flex: 1;
-    height: 443px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
+
+.CardContainer:hover {
+    transform: scale(1.05);
+}
+
+.CardImage {
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.CardLanguages, .CardTools {
+    margin-top: 10px;
+}
+.cardDescription{
+    /*height: 85px;*/
 }
