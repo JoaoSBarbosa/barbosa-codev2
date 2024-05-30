@@ -12,12 +12,9 @@ export const About = () => {
                         Tenho experiência com diversas tecnologias, incluindo Spring, SASS, Bootstrap, TypeScript,
                         ReactJs, Angular, NodeJs, SQL, MySQL, Git, Jira, além de práticas de testes unitários e de
                         integração. Também estou familiarizado com metodologias ágeis como Scrum e Kanban.
-
-
                     </p>
                 </div>
             </Layout>
-
         </RootSection>
 
     )
