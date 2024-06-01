@@ -52,7 +52,7 @@ export const Banner = () => {
     return (
         <div className="flex text-gray-300 flex-col items-center justify-center pt-16 pb-2 ">
             <div className={"w-full h-14 mb-16"}>
-                <h1 className={"text-5xl text-center"}>
+                <h1 className={"text-4xl md:text-5xl text-center"}>
                     <span
                         className="txt-rotate"
                         data-period="1000"
@@ -64,7 +64,7 @@ export const Banner = () => {
                 </h1>
             </div>
             <div>
-                <h2 className={"text-xl break-all text-balance max-w-4xl text-center"}>
+                <h2 className={"text-xl md:break-all text-balance max-w-4xl text-center"}>
                     Sou um desenvolvedor Full Stack dedicado por desenvolver sistemas e criar soluções eficientes
                 </h2>
             </div>

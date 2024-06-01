@@ -7,7 +7,7 @@ export const Menu = () => {
     const [isActive, setIsActive ]= useState(false);
     return (
 
-        <header className={"flex items-center justify-between py-4"}>
+        <header className={"flex items-center justify-between p-4 md:p-0 py-4"}>
             <Link href={"../"} id={"logo"}>
                 <img src="/assets/img/logo.svg" alt="logo" className={"h-20"}/>
             </Link>

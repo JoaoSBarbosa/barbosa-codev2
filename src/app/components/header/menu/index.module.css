@@ -84,15 +84,15 @@
 
     .hamburger {
         display: block;
-        width: 30px;
-        border-top: 3px solid;
+        width: 40px;
+        border-top: 4px solid;
     }
 
     .hamburger::after,
     .hamburger::before {
         content: "";
-        width: 30px;
-        height: 3px;
+        width: 40px;
+        height: 4px;
         display: block;
         background: currentColor;
         margin-top: 0.5rem;
@@ -110,6 +110,6 @@
 
     .active .hamburger::after {
         transform: rotate(-135deg);
-        top: -10px;
+        top: -11px;
     }
 }
