@@ -7,3 +7,21 @@
     scrollbar-width: thin;
     scrollbar-color: #694DF8 #000;
 }
+.skillTitle {
+    font-size: 2rem;
+    text-align: start;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+/* Esconde o título em telas maiores que 600px */
+.hiddenOnLargeScreens {
+    display: none;
+}
+
+/* Mostra o título em telas menores que 600px */
+@media (max-width: 400px) {
+    .hiddenOnLargeScreens {
+        display: block;
+    }
+}

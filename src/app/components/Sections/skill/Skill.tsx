@@ -22,9 +22,10 @@ export const Skill = () => {
 
         <RootSection isDarkBackgroundColor={true} isBottomBoxShadow={true}>
             <Layout>
+                {/*<h2 className={`${styles.skillTitle} ${styles.hiddenOnLargeScreens}`}>Skill</h2>*/}
                 <ul className={`${styles.skillContainer}`} id={"skill"}>
 
-                    {SkillCardData.map((skill, index) => (
+                {SkillCardData.map((skill, index) => (
                         <li key={skill.id}>
                             <CardSkill
                                 pathImage={skill.pathImage}

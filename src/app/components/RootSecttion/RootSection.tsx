@@ -9,7 +9,7 @@ interface RootSectionProps {
 export const RootSection = ({isDarkBackgroundColor,isBottomBoxShadow, children}: RootSectionProps) => {
 
     return (
-        <section className={`${isBottomBoxShadow && styles.bgContainer} ${isDarkBackgroundColor ? "bg-deep-gray text-white" : ""}`}>
+        <section className={`${isBottomBoxShadow && styles.bgContainer} ${isDarkBackgroundColor ? "bg-deep-gray text-white" : ""} py-8`}>
             {children}
         </section>
     )
