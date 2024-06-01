@@ -7,7 +7,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     border-radius: 8px;
-    /*flex: 1 1 400px;*/
+    flex: 1;
+    min-width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,79 +101,63 @@
 }
 
 /* Estilo para telas maiores */
-@media (min-width: 1024px) {
-    .CardContainer {
-        flex: 1 1 400px;
-    }
-}
 
-@media (max-width: 1014px) {
-    .CardContainer {
+/*@media (max-width: 1024px) {*/
+/*    .CardContainer {*/
+/*        padding: 10px;*/
+/*        !*flex: 1 1 400px;*!*/
+/*        border: 2px solid red;*/
+/*    }*/
 
-        flex-direction: row;
-        padding: 0;
-        gap: 11px;
-        margin: 10px;
-        box-sizing: border-box;
-    }
+/*    .cardImageContainer {*/
+/*        border: 2px solid #66ff00;*/
+/*        flex: 1;*/
 
-    .CardContainer:hover {
-        transform: none;
-    }
+/*    }*/
+
+/*    .CardImageContent {*/
+/*        height: 50px;*/
+/*        width: 50px;*/
 
 
-    .CardTitle {
-        font-size: 1.5rem;
-    }
+/*    }*/
 
-    .CardTitle,
-    .cardDescription,
-    .CardLanguagesContainer,
-    .CardContain,
-    .CardTools h3,
-    .cardToolsList,
-    .CardLanguagesContainer h3,
-    .CardLanguagesList{
-        text-align: start;
-        justify-content: start;
+/*    .CardImage {*/
+/*        height: 35px;*/
+/*        margin-bottom: 10px;*/
+/*    }*/
 
-    }
+/*    .cardTitleContainer {*/
+/*        height: max-content;*/
+/*        margin-top: 1rem !* 16px *!;*/
+/*        margin-bottom: 1rem !* 16px *!;*/
+/*    }*/
 
+/*    .cardDescription {*/
+/*        !*height: 7rem !* 112px *!;*!*/
+/*        margin-bottom: 1rem !* 16px *!;*/
+/*        padding: 0.5rem !* 8px *!;*/
+/*        border: 2px solid #66ff00;*/
 
-    .cardDescription {
-        height: max-content /* 112px */;
-        margin-bottom: 1rem /* 16px */;
-    }
+/*        flex: 1;*/
+/*    }*/
 
+/*    .CardLanguagesContainer,*/
+/*    .CardTools{*/
+/*        flex: 1;*/
+/*        border: 2px solid #66ff00;*/
 
-
-    .cardImageContainer {
-        width: 100px;
-
-    }
-    .cardInfosContainer{
-        flex: 1;
-    }
+/*    }*/
 
 
+/*    .CardTitle {*/
+/*        font-size: 1.1rem;*/
+/*        font-weight: 600;*/
 
-    .CardImageContent {
-        height: 100%;
-        padding:10px;
-        width: 100%;
-        border-radius: 8px 0 0 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+/*    }*/
 
-        background: #574c98;
-
-    }
-
-    .CardImage {
-        width: 200px;
-        margin-bottom: initial;
-    }
-
-
-}
+/*    .CardTools h3 {*/
+/*        font-size: 0.90rem;*/
+/*        font-weight: 600;*/
+/*    }*/
+/*}*/

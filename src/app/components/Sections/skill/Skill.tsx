@@ -4,8 +4,8 @@ import {ToolsType} from "@/app/types/Skill/ToolsType";
 import {RootSection} from "@/app/components/RootSecttion/RootSection";
 import {Layout} from "@/app/components/Layout/Layout";
 import {SkillCardData} from "@/app/data/Skill/SkillCardData";
+import styles from "./Skill.module.css";
 
-import styles from "../../CardSkill/CardSkill.module.css";
 export const Skill = () => {
     const languages: LanguagesType[] = [
         {id: 1, title: "Java"},
@@ -22,21 +22,21 @@ export const Skill = () => {
 
         <RootSection isDarkBackgroundColor={true} isBottomBoxShadow={true}>
             <Layout>
-                <div className="grid sm:grid-cols-1 lg:grid-cols-3 overflow-scroll" id={"skill"}>
-                    {SkillCardData.map((skill, index) => {
+                <ul className={`${styles.skillContainer}`} id={"skill"}>
 
-                        return (
+                    {SkillCardData.map((skill, index) => (
+                        <li key={skill.id}>
                             <CardSkill
-                                key={skill.id}
                                 pathImage={skill.pathImage}
                                 titleSkill={skill.skillTitle}
                                 description={skill.skillDescription}
                                 languages={skill.languages}
                                 tools={skill.tools}
                             />
-                        );
-                    })}
-                </div>
+                        </li>
+                    ))}
+
+                </ul>
             </Layout>
         </RootSection>
     )
