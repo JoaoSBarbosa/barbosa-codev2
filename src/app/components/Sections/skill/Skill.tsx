@@ -1,4 +1,4 @@
-import {CardSkill} from "@/app/components/CardSkill/CardSkill";
+import {CardSkill} from "@/app/components/Cards/cardSkill/CardSkill";
 import {LanguagesType} from "@/app/types/Skill/LanguagesType";
 import {ToolsType} from "@/app/types/Skill/ToolsType";
 import {RootSection} from "@/app/components/RootSecttion/RootSection";

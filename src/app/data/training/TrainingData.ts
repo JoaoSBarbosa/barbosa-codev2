@@ -5,52 +5,71 @@ export const TrainingData: TrainingDataType[] =
         {
             id: 1,
             level: "TECNÓLOGO",
-            course: "",
-            institution: "",
+            course: "Análise e Desenvolvimento de Sistema",
+            institution: "UNINTER",
+            technologies: ["java", "spring", "mysql"], // Adicione as tecnologias associadas
         },
         {
             id: 2,
             level: "TÉCNICO",
-            course: "",
-            institution: "",
+            course: "Técnico em Desenvolvimento de Sistema",
+            institution: "ETEC",
+            technologies: ["javascript", "PHP","html", "css"],
         },
         {
             id: 3,
             level: "FORMAÇÃO CONTINUA",
-            course: "",
-            institution: "",
+            course: "Banco de Dados",
+            institution: "B7WEB",
+            technologies: ["postgresql"],
+
         },
         {
             id: 4,
             level: "FORMAÇÃO CONTINUA",
             course: "HTML e CSS",
             institution: "ORIGAMID",
+            technologies: ["javascript", "react","html", "css", "nextjs"],
+
         },
         {
             id: 4,
             level: "FORMAÇÃO CONTINUA",
             course: "Javascript",
             institution: "B7WEB",
+            technologies: ["javascript"],
+
         },
         {
             id: 5,
             level: "FORMAÇÃO CONTINUA",
             course: "Typescript",
             institution: "B7WEB",
-        }, {
-        id: 6,
-        level: "FORMAÇÃO CONTINUA",
-        course: "UI Design para iniciantes",
-        institution: "ORIGAMID",
-    }, {
-        id: 7,
-        level: "FORMAÇÃO CONTINUA",
-        course: "Auxiliar de Desenvolvimento de Sistema",
-        institution: "ETEC",
-    }, {
-        id: 7,
-        level: "FORMAÇÃO CONTINUA",
-        course: "Formação Desenvolvedor Java",
-        institution: "UDEMY - Nélio Alves",
-    },
+            technologies: ["javascript", "typescript"],
+
+        },
+        {
+            id: 6,
+            level: "FORMAÇÃO CONTINUA",
+            course: "UI Design para iniciantes",
+            institution: "ORIGAMID",
+            technologies: ["figma"],
+
+        },
+        {
+            id: 7,
+            level: "FORMAÇÃO CONTINUA",
+            course: "Auxiliar de Desenvolvimento de Sistema",
+            institution: "ETEC",
+            technologies: ["javascript", "php","html", "css"],
+
+        },
+        {
+            id: 7,
+            level: "FORMAÇÃO CONTINUA",
+            course: "Formação Desenvolvedor Java",
+            institution: "UDEMY - Nélio Alves",
+            technologies: ["java", "mysql","spring"],
+
+        },
     ]

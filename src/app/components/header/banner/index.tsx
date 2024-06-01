@@ -65,7 +65,7 @@ export const Banner = () => {
             </div>
             <div>
                 <h2 className={"text-xl md:break-all text-balance max-w-4xl text-center"}>
-                    Sou um desenvolvedor Full Stack dedicado por desenvolver sistemas e criar soluções eficientes
+                    Desenvolvedor Full Stack dedicado por desenvolver sistemas e criar soluções eficientes
                 </h2>
             </div>
             <div>

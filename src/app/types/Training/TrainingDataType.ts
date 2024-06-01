@@ -3,4 +3,5 @@ export type TrainingDataType ={
     level: string;
     course: string;
     institution: string,
+    technologies: string[],
 }
