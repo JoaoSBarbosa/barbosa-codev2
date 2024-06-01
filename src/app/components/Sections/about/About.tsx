@@ -5,7 +5,7 @@ export const About = () => {
     return (
         <RootSection>
             <Layout>
-                <div className={"flex text-gray-300 flex-col items-center justify-center my-14"}>
+                <div className={"flex text-gray-300 flex-col items-center justify-center mt-14 mb-36"}>
                     <h1 className={"text-3xl mb-10"}>Olá, eu sou o João</h1>
                     <p className={"my-4 max-w-screen-lg text-center text-xl"}>
                         Sou desenvolvedor Full Stack e atualmente estou cursando Análise e Desenvolvimento de Sistemas.

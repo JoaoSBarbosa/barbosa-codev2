@@ -1,5 +1,4 @@
 
-
 .CardContainer {
     padding: 32px;
     margin: 10px;
@@ -8,12 +7,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     border-radius: 8px;
-    flex: 1;
+    /*flex: 1 1 400px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*gap: 1px;*/
-
     box-sizing: border-box;
 }
 
@@ -21,17 +18,48 @@
     transform: scale(1.05);
 }
 
-.CardImageContent{
+.CardImageContent {
     height: 50px;
     width: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #694DF8;
 }
+
 .CardImage {
     height: 35px;
     margin-bottom: 10px;
+}
+
+.cardTitleContainer {
+    height: 2.5rem /* 40px */;
+    margin-top: 1rem /* 16px */;
+    margin-bottom: 1rem /* 16px */;
+}
+
+.CardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #694DF8;
+}
+
+.CardTools h3 {
+    text-align: center;
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+    font-weight: 700;
+}
+
+.cardToolsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.375rem /* 6px */;
+    margin-top: 1rem /* 16px */;
+    margin-bottom: 1rem /* 16px */;
 }
 
 .CardLanguages, .CardTools {
@@ -44,6 +72,107 @@
     -webkit-text-fill-color: transparent;
 }
 
-.cardDescription{
-    /*height: 85px;*/
+.cardDescription {
+    height: 7rem /* 112px */;
+    margin-bottom: 1rem /* 16px */;
+    padding: 0.5rem /* 8px */;
+    text-align: center;
+}
+
+.CardLanguagesContainer {
+    height: 6rem /* 96px */;
+}
+
+.CardLanguagesContainer h3 {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+    font-weight: 700;
+    text-align: center;
+}
+
+.CardLanguagesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.375rem /* 6px */;
+    margin-top: 1rem /* 16px */;
+    margin-bottom: 1rem /* 16px */
+}
+
+/* Estilo para telas maiores */
+@media (min-width: 1024px) {
+    .CardContainer {
+        flex: 1 1 400px;
+    }
+}
+
+@media (max-width: 1014px) {
+    .CardContainer {
+
+        flex-direction: row;
+        padding: 0;
+        gap: 11px;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .CardContainer:hover {
+        transform: none;
+    }
+
+
+    .CardTitle {
+        font-size: 1.5rem;
+    }
+
+    .CardTitle,
+    .cardDescription,
+    .CardLanguagesContainer,
+    .CardContain,
+    .CardTools h3,
+    .cardToolsList,
+    .CardLanguagesContainer h3,
+    .CardLanguagesList{
+        text-align: start;
+        justify-content: start;
+
+    }
+
+
+    .cardDescription {
+        height: max-content /* 112px */;
+        margin-bottom: 1rem /* 16px */;
+    }
+
+
+
+    .cardImageContainer {
+        width: 100px;
+
+    }
+    .cardInfosContainer{
+        flex: 1;
+    }
+
+
+
+    .CardImageContent {
+        height: 100%;
+        padding:10px;
+        width: 100%;
+        border-radius: 8px 0 0 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #574c98;
+
+    }
+
+    .CardImage {
+        width: 200px;
+        margin-bottom: initial;
+    }
+
+
 }

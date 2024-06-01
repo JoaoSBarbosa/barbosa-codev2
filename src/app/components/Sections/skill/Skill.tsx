@@ -22,7 +22,7 @@ export const Skill = () => {
 
         <RootSection isDarkBackgroundColor={true} isBottomBoxShadow={true}>
             <Layout>
-                <div className="flex flex-row" id={"skill"}>
+                <div className="grid sm:grid-cols-1 lg:grid-cols-3 overflow-scroll" id={"skill"}>
                     {SkillCardData.map((skill, index) => {
 
                         return (

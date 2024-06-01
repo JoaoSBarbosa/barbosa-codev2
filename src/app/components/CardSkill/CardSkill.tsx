@@ -71,39 +71,45 @@ export const CardSkill: React.FC<CardSkillProps> = ({
     return (
         <div className={`${styles.CardContainer}`}>
 
-            <div className={"flex items-center w-full justify-center "}>
-                <div className={` ${styles.CardImageContent} bg-purple-custom`}>
+            <div className={`flex items-center w-full justify-center ${styles.cardImageContainer}`}>
+                <div className={` ${styles.CardImageContent}`}>
                     <img src={`${pathImage}`} alt={titleSkill} className={"h-1/2 w-full max-h-full"}/>
                 </div>
             </div>
 
-            <div className={" my-4 h-10"}>
-                <h2 className={`${styles.CardTitle} text-purple-custom text-2xl font-bold text-center `}>{titleSkill}</h2>
-            </div>
+            <div className={`${styles.cardInfosContainer}`}>
 
-            <div className={`${styles.cardDescription} h-28 mb-4 p-2 text-center `}>
-                <p>{description}</p>
-            </div>
-
-            <div className={`${styles.CardLanguagesContainer} h-24 `}>
-                <h3 className={`${styles.textGradient} font-bold text-xl text-center`}>Linguagens e Frameworks</h3>
-                <div className={"flex justify-center gap-1.5 my-4"}>
-                    {languages.map((language) => (
-                        <p key={language.id}>{language.title}, </p>
-                    ))}
+                <div className={`${styles.cardTitleContainer}`}>
+                    <h2 className={`${styles.CardTitle}`}>{titleSkill}</h2>
                 </div>
+
+                <div className={`${styles.cardDescription}`}>
+                    <p>{description}</p>
+                </div>
+
+                <div className={`${styles.CardLanguagesContainer}`}>
+                    <h3 className={`${styles.textGradient}`}>Linguagens e Frameworks</h3>
+                    <div className={`${styles.CardLanguagesList}`}>
+                        {languages.map((language) => (
+                            <p key={language.id}>{language.title}, </p>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={`${styles.CardTools}`}>
+                    <h3 className={`${styles.textGradient}`}>
+                        Ferramentas
+                    </h3>
+                    <div className={`${styles.cardToolsList}`}>
+                        {tools.map((tool) => (
+                            <p key={tool.id}>{tool.title}</p>
+                        ))}
+                    </div>
+                </div>
+
             </div>
 
-            <div className={`${styles.CardTools}`}>
-                <h3 className={`${styles.textGradient} font-bold text-xl text-center`}>
-                    Ferramentas
-                </h3>
-                <div className={"flex justify-center gap-1.5 my-4"}>
-                    {tools.map((tool) => (
-                        <p key={tool.id}>{tool.title}</p>
-                    ))}
-                </div>
-            </div>
+
         </div>
 
     );
