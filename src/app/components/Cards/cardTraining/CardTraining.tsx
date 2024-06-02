@@ -12,7 +12,7 @@ export const CardTraining: React.FC<CardTrainingProps> = ({cardData}) => {
     return (
         <div
             className="
-            flex h-56 flex-col justify-between p-4
+            flex h-56 min-w-80 flex-col justify-between p-4
             rounded-md bg-dark-gray border border-transparent
             transition-all duration-300 hover:shadow-lg hover:shadow-purple-custom hover:border-purple-custom"
             onMouseEnter={() => setIsHovered(true)}

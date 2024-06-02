@@ -1,0 +1,29 @@
+
+.TrainingContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+
+    .TrainingContainer{
+        padding: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    .TrainingContainer{
+        display: flex;
+        gap: 20px;
+        padding: 0 20px 20px 20px;
+        margin: 0 auto;
+        overflow: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #694DF8 #000;
+    }
+}

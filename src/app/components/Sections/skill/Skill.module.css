@@ -20,8 +20,12 @@
 }
 
 /* Mostra o título em telas menores que 600px */
+
+
+
 @media (max-width: 400px) {
     .hiddenOnLargeScreens {
         display: block;
     }
 }
+

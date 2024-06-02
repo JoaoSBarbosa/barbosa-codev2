@@ -102,6 +102,17 @@
 
 /* Estilo para telas maiores */
 
+@media(max-width: 448px){
+    .CardContainer {
+        padding: 20px;
+        min-width: 320px;
+    }
+
+    .CardContainer:hover {
+        transform: none;
+    }
+
+}
 /*@media (max-width: 1024px) {*/
 /*    .CardContainer {*/
 /*        padding: 10px;*/
