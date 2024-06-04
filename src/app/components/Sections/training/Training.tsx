@@ -9,10 +9,10 @@ export const Training = () => {
 
     return (
         <RootSection isDarkBackgroundColor={true}>
-            <Layout>
+            <Layout sectionTitle={"Ensino superior, Técnico e formação continua"} sectionSubTitle={"Ensino superior, Técnico e formação continua"}>
 
-                <h2 className={"text-center text-3xl mb-4"} id={"training"}>Cursos e Formações</h2>
-                <h3 className={"text-center mb-8"}>Ensino superior, Técnico e formação continua</h3>
+                {/*<h2 className={"text-center text-3xl mb-4"} id={"training"}>Cursos e Formações</h2>*/}
+                {/*<h3 className={"text-center mb-8"}>Ensino superior, Técnico e formação continua</h3>*/}
 
                 <ul className={`${styles.TrainingContainer} `}>
                     {TrainingData.map((training) => (

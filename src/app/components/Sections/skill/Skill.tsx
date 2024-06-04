@@ -21,7 +21,7 @@ export const Skill = () => {
     return (
 
         <RootSection isDarkBackgroundColor={true} isBottomBoxShadow={true}>
-            <Layout>
+            <Layout >
                 {/*<h2 className={`${styles.skillTitle} ${styles.hiddenOnLargeScreens}`}>Skill</h2>*/}
                 <ul className={`${styles.skillContainer}`} id={"skill"}>
 

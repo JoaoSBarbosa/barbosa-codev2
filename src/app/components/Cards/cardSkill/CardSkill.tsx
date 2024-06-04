@@ -2,6 +2,7 @@
 import styles from "./CardSkill.module.css";
 import {LanguagesType} from "@/app/types/Skill/LanguagesType";
 import {ToolsType} from "@/app/types/Skill/ToolsType";
+import React from "react";
 
 export enum IconHeightEnum {
     H0 = "h-0 w-0",

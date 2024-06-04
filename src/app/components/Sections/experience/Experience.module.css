@@ -1,0 +1,61 @@
+/*.timeline {*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    width: 4px;*/
+/*    background-color: #111;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    margin-left: -2px;*/
+/*}*/
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+}
+
+.timeline {
+    position: absolute;
+    width: 2px;
+    background-color: #333333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.cardExperienceContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    margin: 40px 0;
+}
+
+.cardExperienceContainer.left {
+    justify-content: flex-start;
+}
+
+.card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: #694DF8;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
