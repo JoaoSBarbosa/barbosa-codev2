@@ -20,25 +20,20 @@ export const Skill = () => {
     ]
     return (
 
-        <RootSection isDarkBackgroundColor={true} isBottomBoxShadow={true}>
-            <Layout >
-                {/*<h2 className={`${styles.skillTitle} ${styles.hiddenOnLargeScreens}`}>Skill</h2>*/}
-                <ul className={`${styles.skillContainer}`} id={"skill"}>
-
+        <Layout marginBottom={130} sectionTitle={"Skill"} sectionSubTitle={"Tecnologias e ferramentas que utilizo"}>
+            <ul className={`${styles.skillContainer}`} id={"skill"}>
                 {SkillCardData.map((skill, index) => (
-                        <li key={skill.id}>
-                            <CardSkill
-                                pathImage={skill.pathImage}
-                                titleSkill={skill.skillTitle}
-                                description={skill.skillDescription}
-                                languages={skill.languages}
-                                tools={skill.tools}
-                            />
-                        </li>
-                    ))}
-
-                </ul>
-            </Layout>
-        </RootSection>
+                    <li key={skill.id}>
+                        <CardSkill
+                            pathImage={skill.pathImage}
+                            titleSkill={skill.skillTitle}
+                            description={skill.skillDescription}
+                            languages={skill.languages}
+                            tools={skill.tools}
+                        />
+                    </li>
+                ))}
+            </ul>
+        </Layout>
     )
 }

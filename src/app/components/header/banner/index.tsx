@@ -2,6 +2,7 @@
 import {useEffect, useState} from 'react';
 import {RootSection} from "@/app/components/RootSecttion/RootSection";
 import {Layout} from "@/app/components/Layout/Layout";
+import styles from "./Banner.module.css";
 
 export const Banner = () => {
     const [currentLoopIndex, setCurrentLoopIndex] = useState<number>(0);
@@ -50,31 +51,47 @@ export const Banner = () => {
     };
 
     return (
-        <div className="flex text-gray-300 flex-col items-center justify-center pt-16 pb-2 ">
-            <div className={"w-full h-14 mb-16"}>
-                <h1 className={"text-4xl md:text-5xl text-center"}>
-                    <span
-                        className="txt-rotate"
-                        data-period="1000"
-                        data-rotate='[ "Backend Developer ", "Frontend Developer", "Database" ]'
-                    >
-                        <span className="wrap">{displayedText}</span>
-                    </span>
-                    {" | "}
-                </h1>
-            </div>
-            <div>
-                <h2 className={"text-xl md:break-all text-balance max-w-4xl text-center"}>
-                    Desenvolvedor Full Stack dedicado por desenvolver sistemas e criar soluções eficientes
-                </h2>
-            </div>
-            <div>
-                <img
-                    src="/assets/img/barbosa.png"
-                    alt="João Barbosa"
-                    className="object-cover rounded-full h-96"
-                />
-            </div>
+        <div className="flex text-gray-300 flex-col items-center">
+
+                <div className={`${styles.introduction} text-white max-w-screen-xl mx-auto`}>
+                    <div className={`${styles.introductionContent}`}>
+                        <div className={"flex flex-col justify-between mb-6 "}>
+                            <h1>
+                                Olá, eu sou o João Barbosa
+                                <span className={"text-purple-custom rounded-full"}>.</span>
+                            </h1>
+
+
+                            <h2 className={"text-2xl text-start text-purple-gray-custom"}>
+                                <span
+                                    className="txt-rotate"
+                                    data-period="1000"
+                                    data-rotate='[ "Backend Developer ", "Frontend Developer", "Database" ]'
+                                >
+                                    <span className="wrap">{displayedText}</span>
+                                </span>
+                                <span className={"font-bold"}>{" | "}</span>
+                            </h2>
+                        </div>
+
+
+                        <p className={""}>
+                            Desenvolvedor Full Stack Júnior apaixonado por criar soluções web inovadoras.
+                            Minhas habilidades abrangem o uso de tecnologias como Java, Spring, SQL,
+                            JavaScript e React. Estou comprometido em oferecer resultados excepcionais
+                            enquanto continuo a aprimorar minhas habilidades no desenvolvimento de software.
+                        </p>
+                    </div>
+                    <div className={`${styles.introductionImage}`}>
+                        <img
+                            src={"/assets/img/barbosa.png"}
+                            width={500}
+                            className={`${styles.image}`}
+                            alt={"João Barbosa, desenvolvedor Full Stack Júnior, sorrindo com óculos de grau e camiseta social."}
+                        />
+                    </div>
+                </div>
+
         </div>
 
     );

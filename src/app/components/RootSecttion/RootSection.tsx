@@ -3,13 +3,42 @@ import styles from "./RootSectionProps.module.css"
 interface RootSectionProps {
     isDarkBackgroundColor?: boolean;
     isBottomBoxShadow?: boolean;
+    isShadowContainer?: boolean;
     children: ReactNode;
 }
 
-export const RootSection = ({isDarkBackgroundColor,isBottomBoxShadow, children}: RootSectionProps) => {
+export const RootSection = ({isDarkBackgroundColor,isBottomBoxShadow,isShadowContainer, children}: RootSectionProps) => {
 
     return (
-        <section className={`${isBottomBoxShadow && styles.bgContainer} ${isDarkBackgroundColor ? "bg-deep-gray text-white" : ""} py-8`}>
+        <section
+            className={`${styles.rootContainer} pb-14`}>
+            <div className={`${styles.galaxyBackground}`}>
+                {[...Array(50)].map((_, index) => (
+                    <div
+                        key={index}
+                        className={`${styles.star}`}
+                        style={{
+                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}%`,
+                        }}
+                    />
+                ))}
+
+                {[...Array(5)].map((_, index) => (
+                    <div
+                        key={index}
+                        className={`${styles.comet}`}
+                        style={{
+                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}%`,
+                            animationDuration: `${Math.random() * 3 + 2}s`,
+                            animationDelay: `-${Math.random()}s`, // Adicionei o sinal de menos para ajustar o atraso
+                        }}
+                    />
+                ))}
+            </div>
+
+
             {children}
         </section>
     )

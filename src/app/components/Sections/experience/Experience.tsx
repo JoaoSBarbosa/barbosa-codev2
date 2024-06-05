@@ -77,7 +77,7 @@ export const experienceLis: ExperienceType[] = [
 
 export const Experience = () => {
     return (
-        <RootSection isDarkBackgroundColor={true}>
+        <RootSection isDarkBackgroundColor={false} >
             <Layout position={Position.RELATIVE}>
                 <div className={styles.timelineContainer}>
                     <div className={styles.timeline}></div>

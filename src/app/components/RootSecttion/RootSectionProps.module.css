@@ -1,3 +1,124 @@
-.bgContainer{
-    box-shadow: inset 0 250px #000;
+
+@keyframes starMove {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.star-intro {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: #fff; /* Pode ser ajustado para roxo ou branco conforme necessário */
+    animation: starMove linear infinite;
+}
+
+.planet-intro {
+    position: absolute;
+    width: 10px; /* Ajuste o tamanho conforme necessário */
+    height: 10px; /* Ajuste o tamanho conforme necessário */
+    background-color: #800080; /* Roxo para planetas */
+    border-radius: 50%;
+    animation: starMove linear infinite;
+}
+
+/* Adicione estas regras à classe .introductionContainer */
+
+.introductionContainer {
+    background-color: #000;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+/* Adicione as estrelas e planetas à .introductionContainer usando a classe .star-intro ou .planet-intro */
+
+.star-intro,
+.planet-intro {
+    top: 0;
+    left: 0;
+}
+
+/* Adicione a quantidade e o posicionamento desejados de estrelas e planetas */
+
+/* Estrelas */
+.star1 {
+    top: 20%;
+    left: 10%;
+}
+
+.star2 {
+    top: 50%;
+    left: 80%;
+}
+
+/* Planetas */
+.planet1 {
+    top: 70%;
+    left: 40%;
+}
+
+.planet2 {
+    top: 30%;
+    left: 60%;
+}
+
+.galaxyBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    overflow: hidden; /* Adicionado para esconder as estrelas que ultrapassam a borda da tela */
+}
+
+.star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: #fff;
+    animation: twinkle 1s infinite, moveStars linear infinite; /* Adicionado movimento às estrelas */
+}
+
+.comet {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: cometMove linear infinite; /* Adicionado movimento linear aos cometas */
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh); /* Mova as estrelas para baixo da tela */
+    }
+}
+
+@keyframes cometMove {
+    from {
+        transform: translateX(0) translateY(-50vh); /* Mova os cometas de cima para baixo da tela */
+    }
+    to {
+        transform: translateX(100vw) translateY(100vh); /* Mova os cometas diagonalmente para fora da tela */
+    }
+}
+
+.rootContainer{
+    font-family: 'Roboto', sans-serif;
 }
