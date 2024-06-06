@@ -1,14 +1,5 @@
-/*.timeline {*/
-/*    position: absolute;*/
-/*    left: 50%;*/
-/*    width: 4px;*/
-/*    background-color: #111;*/
-/*    top: 0;*/
-/*    bottom: 0;*/
-/*    margin-left: -2px;*/
-/*}*/
 
-.timeline-container {
+.timelineContainer {
     position: relative;
     width: 100%;
 }
@@ -21,6 +12,7 @@
     bottom: 0;
     left: 50%;
     margin-left: -1px;
+
 }
 
 .cardExperienceContainer {
@@ -58,4 +50,44 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+    .timelineContainer {
+        position: initial;
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .timeline {
+        position: absolute;
+        width: 2px;
+        background-color: #333333;
+        top: 25px;
+        bottom: 330px;
+        left: 33px;
+        margin-left: -1px;
+    }
+
+    .cardExperienceContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .card {
+        width: 80%; /* Reduz a largura do card */
+    }
+
+    .circle {
+        position: static;
+        transform: none;
+        margin-bottom: 20px; /* Adiciona espaço entre o círculo e o card */
+    }
+
+    .cardExperienceContainer.left .circle {
+        margin-bottom: 0; /* Remove espaço extra entre o círculo e o card quando na posição à esquerda */
+    }
 }

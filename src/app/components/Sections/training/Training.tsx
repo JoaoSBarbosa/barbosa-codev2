@@ -3,20 +3,26 @@ import React from "react";
 import {TrainingData} from "@/app/data/training/TrainingData";
 import {CardTraining} from "@/app/components/Cards/cardTraining/CardTraining";
 import styles from "./Training.module.css";
+import { motion } from 'framer-motion';
 
 export const Training = () => {
-
     return (
         <Layout sectionTitle={"Ensino superior, Técnico e formação continua"} sectionSubTitle={"Ensino superior, Técnico e formação continua"}>
-
-            <ul className={`${styles.TrainingContainer}`}>
+            <motion.ul
+                className={styles.TrainingContainer}
+                initial="hidden"
+                animate="visible"
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.3 } }
+                }}
+            >
                 {TrainingData.map((training) => (
-                    <li key={training.id}>
-                        <CardTraining cardData={training}/>
-                    </li>
+                    <motion.li key={training.id} variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}>
+                        <CardTraining cardData={training} />
+                    </motion.li>
                 ))}
-            </ul>
+            </motion.ul>
         </Layout>
-
     )
 }
