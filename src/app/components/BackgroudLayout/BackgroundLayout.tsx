@@ -7,7 +7,7 @@ interface BackgroundLayoutProps {
 
 export const BackgroundLayout: React.FC<BackgroundLayoutProps> = ({children}) => {
     return (
-        <div className={`${styles.bgGradient} my-8`}>
+        <div className={`${styles.bgGradient} 2xl:my-8`}>
             {children}
         </div>
     )

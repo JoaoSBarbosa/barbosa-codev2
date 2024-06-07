@@ -22,7 +22,7 @@
 
 .card {
     padding: 20px;
-    background: #333333;
+    background: #1A1A1A;
     border-radius: 8px;
     width: 40%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -77,4 +77,21 @@
     .cardExperienceContainer.left {
         justify-content: flex-end;
     }
+}
+@media (max-width: 500px) {
+    .cardExperienceContainer {
+        position: initial;
+        margin: 0;
+
+    }
+    .card {
+        background: #111;
+        width: 100%;
+        position: initial;
+    }
+
+    .circle {
+        display: none;
+    }
+
 }

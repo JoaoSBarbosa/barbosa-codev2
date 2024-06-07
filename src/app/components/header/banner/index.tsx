@@ -76,12 +76,12 @@ export const Banner: React.FC = () => {
         >
             <div className={`${styles.introduction} text-white max-w-screen-xl mx-auto`}>
                 <div className={`${styles.introductionContent}`}>
-                    <div className="flex flex-col justify-between mb-6">
+                    <div className="flex flex-col justify-between mb-2 2xl:mb-6">
                         <h1>
                             Olá, eu sou o João Barbosa
                             <span className="text-purple-custom rounded-full">.</span>
                         </h1>
-                        <h2 className="text-2xl text-start text-purple-gray-custom">
+                        <h2 className="text-center text-3xl 2xl:text-start 2xl:text-2xl text-purple-gray-custom">
                             <span
                                 className="txt-rotate"
                                 data-period="1000"

@@ -1,5 +1,4 @@
-import {RootSection} from "@/app/components/RootSecttion/RootSection";
-import {Layout, Position} from "@/app/components/Layout/Layout";
+import {Layout, Position, TextColor} from "@/app/components/Layout/Layout";
 import {CardExperience} from "@/app/components/Cards/CardExperience/CardExperience";
 import styles from "./Experience.module.css";
 import {ExperienceList} from "@/app/data/experiene/ExperienceList";
@@ -22,8 +21,7 @@ export type ExperienceTechnologiesListType = {
 
 export const Experience = () => {
     return (
-        <RootSection isDarkBackgroundColor={false} >
-            <Layout position={Position.RELATIVE}>
+            <Layout id={"experience"} position={Position.RELATIVE} textColor={TextColor.TEXT_WHITE} sectionTitle={"Experiência Profissional"} sectionSubTitle={"Histórico de Empregos e Projetos"}>
                 <div className={styles.timelineContainer}>
                     <div className={styles.timeline}></div>
                     {ExperienceList.map((experience, index) => (
@@ -35,6 +33,5 @@ export const Experience = () => {
                     ))}
                 </div>
             </Layout>
-        </RootSection>
     );
 };

@@ -6,6 +6,7 @@
     padding: 20px 0;
     box-sizing: border-box;
     margin: 0 auto;
+
 }
 
 .introductionContent {
@@ -46,18 +47,33 @@
     }
 
     .introduction {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
         gap: 0 32px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .introductionContent {
+        align-self: end;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .introduction h1 {
         margin-bottom: 32px;
         font-size: 48px;
         line-height: 1.125;
+        text-align: center;
     }
 
     .introduction p {
-        font-size: 18px;
+        font-size: 20px;
+        width: 80%;
+        text-align: justify;
+
     }
 
     .introductionImage {
@@ -67,14 +83,18 @@
 }
 
 @media (max-width: 800px) {
-    .introductionContainer {
+    .introduction {
+        gap:30px
+    }
+    .introductionContent {
         padding-top: 20px;
     }
 
-    .introduction {
-        padding-bottom: 0;
+    .introduction p {
+        font-size: 20px;
+        width: 100%;
+        margin: 20px 0;
     }
-
     .introduction h1 {
         font-size: 32px;
         margin-bottom: 16px;

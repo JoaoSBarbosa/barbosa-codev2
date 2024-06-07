@@ -14,10 +14,10 @@ export const ExperienceList: ExperienceType[] = [
             "Workspace, Hotjar e Mautic para monitoramento e análise de dados;",
         technologies:
             [
-                {id: 1, technology: "React"},
-                {id: 2, technology: "JavaScript"},
-                {id: 3, technology: "HTML"},
-                {id: 4, technology: "CSS"}
+                {id: 1, technology: "react"},
+                {id: 2, technology: "javaScript"},
+                {id: 3, technology: "html"},
+                {id: 4, technology: "css"}
             ]
     },
     {
@@ -31,11 +31,11 @@ export const ExperienceList: ExperienceType[] = [
             "Flowbite, consumindo APIs REST do Java e facilitando a comunicação entre frontend e backend.",
         technologies:
             [
-                {id: 1, technology: "Java"},
-                {id: 2, technology: "Spring"},
-                {id: 3, technology: "Next-js"},
-                {id: 4, technology: "MySQL"},
-                {id: 5, technology: "React"}
+                {id: 1, technology: "java"},
+                {id: 2, technology: "spring"},
+                {id: 3, technology: "nextjs"},
+                {id: 4, technology: "mysql"},
+                {id: 5, technology: "react"}
             ]
     },
 ]

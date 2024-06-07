@@ -2,6 +2,7 @@
 .timelineContainer {
     position: relative;
     width: 100%;
+
 }
 
 .timeline {
@@ -57,6 +58,7 @@
 
         flex-direction: column;
         align-items: center;
+        padding: 10px;
 
     }
 
@@ -89,5 +91,10 @@
 
     .cardExperienceContainer.left .circle {
         margin-bottom: 0; /* Remove espaço extra entre o círculo e o card quando na posição à esquerda */
+    }
+}
+@media (max-width: 500px){
+    .timeline {
+        display: none;
     }
 }

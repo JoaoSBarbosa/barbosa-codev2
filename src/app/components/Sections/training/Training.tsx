@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export const Training = () => {
     return (
-        <Layout sectionTitle={"Ensino superior, Técnico e formação continua"} sectionSubTitle={"Ensino superior, Técnico e formação continua"}>
+        <Layout id={"training"} sectionTitle={"Formação"} sectionSubTitle={"Ensino superior, Técnico e formação continua"}>
             <motion.ul
                 className={styles.TrainingContainer}
                 initial="hidden"
