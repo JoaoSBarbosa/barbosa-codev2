@@ -1,0 +1,30 @@
+
+.ProjectCardContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 400px;
+
+}
+
+.ProjectCardImgContainer{
+    height: 300px;
+}
+.ProjectCardImgContainer img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.ProjectCardTitleContainer{
+    height: 50px;
+    max-height: 100%;
+
+}
+.ProjectCardTechContainer{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 100%;
+
+}

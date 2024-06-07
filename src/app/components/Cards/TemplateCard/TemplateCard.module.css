@@ -1,0 +1,32 @@
+
+.CardContainer {
+    padding: 32px;
+    margin: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.CardContainer:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 448px) {
+    .CardContainer {
+        padding: 20px;
+        min-width: 320px;
+    }
+
+    .CardContainer:hover {
+        transform: none;
+    }
+
+}

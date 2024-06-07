@@ -1,8 +1,8 @@
-
 import styles from "./CardSkill.module.css";
 import {LanguagesType} from "@/app/types/Skill/LanguagesType";
 import {ToolsType} from "@/app/types/Skill/ToolsType";
 import React from "react";
+import {TemplateCard} from "@/app/components/Cards/TemplateCard/TemplateCard";
 
 export enum IconHeightEnum {
     H0 = "h-0 w-0",
@@ -38,8 +38,9 @@ export const CardSkill: React.FC<CardSkillProps> = ({
                                                         className
                                                     }) => {
     return (
-        <div className={`${styles.CardContainer}`}>
 
+
+        <TemplateCard>
             <div className={`flex items-center w-full justify-center ${styles.cardImageContainer}`}>
                 <div className={` ${styles.CardImageContent}`}>
                     <img src={`${pathImage}`} alt={titleSkill} className={"h-1/2 w-full max-h-full"}/>
@@ -77,9 +78,7 @@ export const CardSkill: React.FC<CardSkillProps> = ({
                 </div>
 
             </div>
-
-
-        </div>
+        </TemplateCard>
 
     );
 };
