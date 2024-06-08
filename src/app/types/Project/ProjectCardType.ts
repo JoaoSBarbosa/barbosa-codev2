@@ -5,6 +5,6 @@ export type ProjectType ={
     coverImage: string;
     title: string;
     description: string;
-    url: string | null;
+    url: string;
     technologies: TechType[]
 }

@@ -1,15 +1,40 @@
+"use client";
 import {Layout, TextColor} from "@/app/components/Layout/Layout";
 import {ProjectList} from "@/app/data/Project/ProjectList";
 import {ProjectCard} from "@/app/components/Cards/ProjectsCard/ProjectCard";
+import {useState} from "react";
+import {ProjectType} from "@/app/types/Project/ProjectCardType";
+import {Modal} from "@/app/components/Modal/Modal";
 
 export const Project = () => {
+
+    const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
+
+    const handleCardClick = (project: ProjectType) => {
+        setSelectedProject(project)
+    }
+
+    const closeModal = () => {
+        setSelectedProject(null);
+    };
     return (
-        <Layout marginTop={100} sectionTitle={"Projetos"} textColor={TextColor.TEXT_WHITE} sectionSubTitle={"Projetos profisionais, Projetos pessoais, Estudos"}>
-         <div className={"grid grid-cols-3 gap-10"}>
-             {ProjectList.map((projec) => (
-                 <ProjectCard project={projec}/>
-             ))}
-         </div>
+        <Layout marginTop={100} sectionTitle={"Projetos"} textColor={TextColor.TEXT_WHITE}
+                sectionSubTitle={"Projetos profisionais, Projetos pessoais, Estudos"}>
+            <div className={"flex justify-between"}>
+                <div className={"grid grid-cols-3 gap-10"}>
+                    {ProjectList.map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            project={project}
+                            onClick={() => handleCardClick(project)}/>
+                    ))}
+                </div>
+
+                {selectedProject && (
+                    <Modal project={selectedProject} onClose={closeModal} />
+                )}
+
+            </div>
         </Layout>
     )
 }

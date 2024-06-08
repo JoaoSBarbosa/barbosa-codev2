@@ -15,7 +15,8 @@ const config: Config = {
                 'custom-gradient': 'linear-gradient(to bottom, #000000, #111111)',
             },
             backgroundColor: {
-                "deep-gray": "#111"
+                "deep-gray": "#111",
+                "purple-custom": "#694DF8",
             },
             colors: {
                 "purple-custom": "#694DF8",

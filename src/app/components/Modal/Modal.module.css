@@ -1,0 +1,146 @@
+/* Modal.module.css */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: #1A1A1A;
+    padding: 10px;
+    border-radius: 10px;
+    height: 70vh;
+    width: 60vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.neuralAnimation {
+    background: linear-gradient(312deg, #3a3a3a 0%, #1a1a1a 50%, #2e2e2e 70%, #1a1a1a 100%);
+    background-size: 300% 300%;
+    animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    width: 40px;
+    display: block;
+    color: #6548f8;
+    transition: all ease .2s;
+}
+
+.closeButton::after,
+.closeButton::before{
+    content: "";
+    width: 40px;
+    margin-top: 5px;
+    height: 4px;
+    background-color: currentColor;
+    display: block;
+}
+
+.closeButton:hover {
+    border-top-color: transparent;
+}
+.closeButton::before{
+    transform: rotate(135deg);
+}
+
+.closeButton::after{
+    transform: rotate(-135deg);
+    margin-top: -4px;
+}
+
+.closeButton:hover::after,
+.closeButton:hover::before{
+    background-color: #b3a7ff;
+
+}
+/*.closeButton {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    right: 10px;*/
+/*    background: red;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 5px 10px;*/
+/*    cursor: pointer;*/
+/*    border-radius: 50%;*/
+/*    font-size: 16px;*/
+
+/*    background: linear-gradient(312deg, #6c5c5c 0%, #cf0000 50%, #834747 70%, #fa0000 100%);*/
+/*    background-size: 300% 300%;*/
+/*    animation: gradientAnimation 20s ease infinite;*/
+/*}*/
+
+.modalBody {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.imageContainer {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imageContainer img {
+    height: 100%;
+    width: 100%;
+    /*border-radius: 10px;*/
+    object-fit: cover;
+}
+
+.infoContainer {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.infoContainer h1 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.infoContainer p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    overflow-y: auto;
+    max-height: 400px;
+
+}
