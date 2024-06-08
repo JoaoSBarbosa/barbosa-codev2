@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+
 }
 
 .modalContent {
@@ -44,61 +45,64 @@
 }
 
 
-.closeButton {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    cursor: pointer;
-    width: 40px;
-    display: block;
-    color: #6548f8;
-    transition: all ease .2s;
-}
-
-.closeButton::after,
-.closeButton::before{
-    content: "";
-    width: 40px;
-    margin-top: 5px;
-    height: 4px;
-    background-color: currentColor;
-    display: block;
-}
-
-.closeButton:hover {
-    border-top-color: transparent;
-}
-.closeButton::before{
-    transform: rotate(135deg);
-}
-
-.closeButton::after{
-    transform: rotate(-135deg);
-    margin-top: -4px;
-}
-
-.closeButton:hover::after,
-.closeButton:hover::before{
-    background-color: #b3a7ff;
-
-}
 /*.closeButton {*/
 /*    position: absolute;*/
-/*    top: 10px;*/
+/*    top: 5px;*/
 /*    right: 10px;*/
-/*    background: red;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    padding: 5px 10px;*/
 /*    cursor: pointer;*/
-/*    border-radius: 50%;*/
-/*    font-size: 16px;*/
-
-/*    background: linear-gradient(312deg, #6c5c5c 0%, #cf0000 50%, #834747 70%, #fa0000 100%);*/
-/*    background-size: 300% 300%;*/
-/*    animation: gradientAnimation 20s ease infinite;*/
+/*    width: 40px;*/
+/*    color: #6548f8;*/
+/*    transition: all ease .2s;*/
+/*    font-size: 2rem;*/
+/*    background-color: #1A1A1A;*/
 /*}*/
 
+
+/*.closeButton::after,*/
+/*.closeButton::before {*/
+/*    content: "";*/
+/*    width: 40px;*/
+/*    margin-top: 5px;*/
+/*    height: 4px;*/
+/*    background-color: currentColor;*/
+/*    display: block;*/
+/*}*/
+
+/*.closeButton:hover {*/
+/*    border-top-color: transparent;*/
+/*}*/
+
+/*.closeButton::before {*/
+/*    transform: rotate(135deg);*/
+/*}*/
+
+/*.closeButton::after {*/
+/*    transform: rotate(-135deg);*/
+/*    margin-top: -4px;*/
+/*}*/
+
+/*.closeButton:hover::after,*/
+/*.closeButton:hover::before {*/
+/*    background-color: #b3a7ff;*/
+
+/*}*/
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    background: #3e27b3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+.closeButton:hover {
+    background: #533ad1;
+}
 .modalBody {
     display: flex;
     justify-content: center;
@@ -129,7 +133,6 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-
 }
 
 .infoContainer h1 {
@@ -143,4 +146,49 @@
     overflow-y: auto;
     max-height: 400px;
 
+}
+
+@media (max-width: 1200px) {
+
+    .modalContent {
+        padding: 5px;
+        width: 90vw;
+    }
+
+    .infoContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .infoContainer p {
+        font-size: 1rem;
+        border-bottom: 1px solid gray;
+    }
+}
+
+@media (max-width: 799px) {
+
+    .modalContent {
+        padding: 5px;
+        width: 90vw;
+        height: max-content;
+        /*max-height: 70vh;*/
+    }
+
+    .imageContainer {
+        display: none;
+    }
+
+    .infoContainer {
+        padding: 5px;
+    }
+
+    .infoContainer h1 {
+        font-size: 1.3rem;
+    }
+
+    .infoContainer p {
+        font-size: 1rem;
+        padding: 5px 0;
+        border-bottom: 1px solid gray;
+    }
 }

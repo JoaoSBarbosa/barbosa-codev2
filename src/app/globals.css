@@ -11,4 +11,8 @@
 body{
     background: #000;
 }
+/* global.css ou outro arquivo CSS global */
+.no-scroll {
+    overflow: hidden;
+}
 

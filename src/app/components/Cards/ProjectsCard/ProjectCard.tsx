@@ -1,7 +1,7 @@
 import {TemplateCard} from "@/app/components/Cards/TemplateCard/TemplateCard";
 import styles from "./ProjectCard.module.css";
 import {ProjectType} from "@/app/types/Project/ProjectCardType";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 interface ProjectCardProps {
     project: ProjectType
@@ -11,6 +11,7 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
 
     const [showProject, setShowProject] = useState<boolean>(false);
+    const [showIcons, setShowIcons] = useState(false);
 
     const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
 
@@ -19,7 +20,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
         setShowProject(true)
     }
 
-    const [showIcons, setShowIcons] = useState(false);
+    useEffect(() => {
+        const handleResize = () => {
+            setShowIcons(window.innerWidth < 800);
+        }
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [])
+
 
     return (
         <div className={`${styles.ProjectCardContainer}`} onClick={() => onClick(project)}

@@ -21,7 +21,7 @@ export const Project = () => {
     return (
         <Layout marginTop={100} sectionTitle={"Projetos"} textColor={TextColor.TEXT_WHITE} sectionSubTitle={"Projetos profisionais, Projetos pessoais, Estudos"}>
             <div className={"flex justify-between"}>
-                <div className={`${styles.projectContent}  gap-10`}>
+                <div className={`${styles.projectContent} gap-10`}>
                     {ProjectList.map((project) => (
                         <ProjectCard
                             key={project.id}
