@@ -1,0 +1,26 @@
+.projectContent{
+    /*display: grid;*/
+    /*!*grid-template-columns: 1fr 1fr 1fr;*!*/
+
+    /*grid-template-columns: repeat(3, 1fr);*/
+    display: flex;
+
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+@media (max-width: 1252px) {
+    .projectContent{
+
+
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .projectContent{
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -10,9 +10,7 @@ export const Modal: React.FC<ModalProps> = ({onClose, project}) => {
     return (
         <div className={styles.modalOverlay} onClick={onClose}>
             <div className={`${styles.modalContent} ${styles.neuralAnimation}`} onClick={(e) => e.stopPropagation()}>
-                <button className={styles.closeButton} onClick={onClose}>
-
-                </button>
+                <button className={styles.closeButton} onClick={onClose}></button>
                 <div className={styles.modalBody}>
                     <div className={styles.imageContainer}>
                         <img src={`/assets/project/${project.coverImage}`} alt={project.title}/>

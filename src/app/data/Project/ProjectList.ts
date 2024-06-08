@@ -6,7 +6,10 @@ export const ProjectList: ProjectType[] =[
         title: 'Portfólio versão 1',
         coverImage: 'project1.png',
         description: 'Primeiro portfolio desenvolvido através.',
-        technologies: [{id:1, tech:'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'}, {id:2, tech:'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'}, {id:3, tech:'JavaScript'}],
+        technologies: [
+            {id:1, tech:'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'},
+            {id:2, tech:'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'},
+            {id:3, tech:'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/02499bc2-439e-49cd-9dfa-44282de73b9f'}],
         url: 'https://joaosbarbosa.github.io/portfolio-barbosa/',
     },
     {
@@ -14,7 +17,10 @@ export const ProjectList: ProjectType[] =[
         title: 'Medic Land',
         coverImage: 'project2.png',
         description: 'Projeto de um site de um hospital ficticio contendo páginas, feito com HTML, CSS e JavaScript. O intuioto do projeto é estudar o bom uso de flex box, eventos js, variaveis css, e responsividade .',
-        technologies: [{id:1, tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'}, {id:2, tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'}, {id:3, tech: 'javascript'}],
+        technologies: [
+            {id:1, tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'},
+            {id:2, tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'},
+            {id:3, tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/02499bc2-439e-49cd-9dfa-44282de73b9f'}],
         url: 'https://medicland.netlify.app/',
     },
     {
@@ -22,7 +28,10 @@ export const ProjectList: ProjectType[] =[
         title: 'Galeria de imagens',
         coverImage: 'project3.png',
         description: 'Projeto de uma página de galerias de imagens feito com HTML, Sass. O intuioto do projeto é entender a funcionalidade e uso do Sass como Mixins, Nesting, Heranças entre outros, aplicando todos o seus conceitos para desenvolvver um layout responsivo e bonito.',
-        technologies: [{id:1,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'}, {id:2,tech: 'sass'},],
+        technologies: [
+            {id:1,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'},
+            {id:2,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/75e6aa86-6b7d-423a-9c1a-58d7e179d791'},
+        ],
         url: 'https://galerias.netlify.app/',
     },
     {
@@ -54,7 +63,7 @@ export const ProjectList: ProjectType[] =[
         description: 'Itaqua Alerta é um sistema web para denúncias e acompanhamento de ocorrências em bairros. Desenvolvido em PHP, JavaScript e Bootstrap, permite cadastro de denúncias com detalhes como título, categoria, localização, data e foto. Após o registro, um e-mail de confirmação é enviado ao usuário. Conta com sistema de login, recuperação de conta e validações de idade mínima (16 anos) e e-mail. O projeto foi desenvolvido no contexto de trabalho de extensão acadêmica do curso de Análise e Desenvolvimento de Sistemas.',
         technologies: [
             {id:1,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/0f60d855-59cf-44ba-912b-9250b580d403'},
-            {id:2,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/0c38c0a9-4013-4b09-a023-cca7ad5a7e4d'},
+            {id:2,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/4bf94fae-d28f-4a17-b843-de697c8aee65'},
             {id:3,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'},
             {id:4,tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/7d19d880-4a02-4a00-8c92-534fd82612e3'}],
         url: 'https://github.com/JoaoSBarbosa/itaquaalerta',

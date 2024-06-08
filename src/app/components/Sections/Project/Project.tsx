@@ -5,6 +5,7 @@ import {ProjectCard} from "@/app/components/Cards/ProjectsCard/ProjectCard";
 import {useState} from "react";
 import {ProjectType} from "@/app/types/Project/ProjectCardType";
 import {Modal} from "@/app/components/Modal/Modal";
+import styles from "./Project.module.css";
 
 export const Project = () => {
 
@@ -18,10 +19,9 @@ export const Project = () => {
         setSelectedProject(null);
     };
     return (
-        <Layout marginTop={100} sectionTitle={"Projetos"} textColor={TextColor.TEXT_WHITE}
-                sectionSubTitle={"Projetos profisionais, Projetos pessoais, Estudos"}>
+        <Layout marginTop={100} sectionTitle={"Projetos"} textColor={TextColor.TEXT_WHITE} sectionSubTitle={"Projetos profisionais, Projetos pessoais, Estudos"}>
             <div className={"flex justify-between"}>
-                <div className={"grid grid-cols-3 gap-10"}>
+                <div className={`${styles.projectContent}  gap-10`}>
                     {ProjectList.map((project) => (
                         <ProjectCard
                             key={project.id}
