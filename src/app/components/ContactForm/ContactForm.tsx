@@ -3,6 +3,7 @@ import {Layout, TextColor} from "@/app/components/Layout/Layout";
 
 export const ContactForm = () => {
     const [emailSent, setEmailSent] = useState(false); // Estado para controlar se o email foi enviado com sucesso
+    const [emailError, setEmailError] = useState(false); // Estado para controlar se houve erro ao enviar o email
 
     const [formData, setFormData] = useState({
         name: '',
@@ -32,10 +33,11 @@ export const ContactForm = () => {
         }).then((response) => {
             if (response.ok) {
                 setEmailSent(true); // Define o estado para indicar que o email foi enviado com sucesso
-
+                setEmailError(false); // Reseta o estado de erro
                 console.log('Email enviado com sucesso!');
             } else {
                 setEmailSent(false); // Define o estado para indicar que houve uma falha no envio do email
+                setEmailError(true); // Define o estado para indicar que houve um erro ao enviar o email
                 console.log('Falha ao enviar o email.');
             }
         }).catch((error) => {
@@ -56,7 +58,7 @@ export const ContactForm = () => {
             marginTop={100}
             sectionTitle={"Contato"}
             textColor={TextColor.TEXT_WHITE}
-            sectionSubTitle={"Entre em contato comigo através do email"}
+            sectionSubTitle={"Vamos bater um papo! Estou aqui para ouvir suas ideias e projetos."}
         >
             <div className="flex items-start justify-center p-4 2xl:p-0  w-full">
                 <form onSubmit={handleSubmit} className="w-full  p-8 space-y-6 bg-dark-gray rounded-lg shadow-md">
