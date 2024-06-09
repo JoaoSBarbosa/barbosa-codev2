@@ -33,7 +33,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
 
 
     return (
-        <div className={`${styles.ProjectCardContainer}`} onClick={() => onClick(project)}
+        <div
+
+            className={`${styles.ProjectCardContainer}`}
+
+             onClick={() => onClick(project)}
              onMouseEnter={() => setShowIcons(true)} onMouseLeave={() => setShowIcons(false)}>
             <div className={`${styles.ProjectCardTitleContainer}`}>
                 <h1>{project.title}</h1>

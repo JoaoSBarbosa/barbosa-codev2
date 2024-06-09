@@ -17,6 +17,7 @@ const config: Config = {
             backgroundColor: {
                 "deep-gray": "#111",
                 "purple-custom": "#694DF8",
+                "purple-gray-custom": "#6F60C0",
             },
             colors: {
                 "purple-custom": "#694DF8",
