@@ -24,7 +24,7 @@ export const ContactForm = () => {
         e.preventDefault();
 
         // fetch('http://localhost:5500/send-email', {
-        fetch('https://barbosacode-server.vercel.app:5500/send-email', {
+        fetch('https://barbosacode-server.vercel.app/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
