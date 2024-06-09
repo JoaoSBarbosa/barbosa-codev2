@@ -106,16 +106,16 @@
         transform: translateY(0);
     }
     to {
-        transform: translateY(100vh); /* Mova as estrelas para baixo da tela */
+        transform: translateY(100vh);
     }
 }
 
 @keyframes cometMove {
     from {
-        transform: translateX(0) translateY(-50vh); /* Mova os cometas de cima para baixo da tela */
+        transform: translateX(0) translateY(-50vh);
     }
     to {
-        transform: translateX(100vw) translateY(100vh); /* Mova os cometas diagonalmente para fora da tela */
+        transform: translateX(100vw) translateY(100vh);
     }
 }
 
