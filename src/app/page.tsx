@@ -33,6 +33,7 @@ import { Experience } from "@/app/components/Sections/experience/Experience";
 import { motion, useAnimation } from 'framer-motion';
 import {SectionWrapper} from "@/app/components/Animations/SectionWrapper/SectionWrapper";
 import {Project} from "@/app/components/Sections/Project/Project";
+import {ContactForm} from "@/app/components/ContactForm/ContactForm";
 
 export default function Home() {
     return (
@@ -51,6 +52,9 @@ export default function Home() {
             </SectionWrapper>
             <SectionWrapper>
                 <Project />
+            </SectionWrapper>
+            <SectionWrapper>
+                <ContactForm />
             </SectionWrapper>
         </RootSection>
     );
