@@ -64,7 +64,7 @@ export const ContactForm = () => {
                 <form onSubmit={handleSubmit} className="w-full  p-8 space-y-6 bg-dark-gray rounded-lg shadow-md">
                     <h2 className="text-2xl font-bold text-purple-custom">Contato</h2>
                     {emailSent && <p className="text-green-500">Email enviado com sucesso!</p>}
-                    {!emailSent && <p className="text-red-500">Falha ao enviar o email.</p>}
+                    {emailError && <p className="text-red-500">Falha ao enviar o email.</p>}
                     <div className="flex flex-col space-y-4">
                         <input
                             type="text"
