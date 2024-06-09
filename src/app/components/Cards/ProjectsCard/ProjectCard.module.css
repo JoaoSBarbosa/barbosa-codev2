@@ -46,10 +46,10 @@
     align-items: center;
     justify-content: space-between;
     /*max-height: 100%;*/
-
     padding: 30px;
 
 }
+
 @media (max-width: 1194px) {
     .ProjectCardContainer {
         width: 340px;

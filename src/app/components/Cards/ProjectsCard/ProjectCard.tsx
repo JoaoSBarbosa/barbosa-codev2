@@ -23,6 +23,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
     useEffect(() => {
         const handleResize = () => {
             setShowIcons(window.innerWidth < 800);
+            console.log(showIcons)
+
         }
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -31,6 +33,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
         };
     }, [])
 
+    const handleShowIcons = () =>{
+
+    }
+
 
     return (
         <div
@@ -38,7 +44,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
             className={`${styles.ProjectCardContainer}`}
 
              onClick={() => onClick(project)}
-             onMouseEnter={() => setShowIcons(true)} onMouseLeave={() => setShowIcons(false)}>
+             onMouseEnter={() => setShowIcons(true)}
+            onMouseLeave={() => setShowIcons(false)}>
             <div className={`${styles.ProjectCardTitleContainer}`}>
                 <h1>{project.title}</h1>
             </div>
@@ -48,7 +55,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
 
             <div className={`${styles.ProjectCardTechContainer} transition-all`}>
                 {showIcons && project.technologies.map((tech) => (
-                    <img key={tech.id} className={"h-6 w-6"} src={tech.tech} alt={'te'}/>
+                    <img key={tech.id} className={"h-6 w-6"} src={tech.tech} alt={`icon-${tech.tech}`}/>
                 ))}
             </div>
         </div>

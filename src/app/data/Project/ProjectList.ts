@@ -11,15 +11,15 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'
+                tech: "/assets/icons/html.svg"
             },
             {
                 id: 3,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/02499bc2-439e-49cd-9dfa-44282de73b9f'
+                tech: "/assets/icons/css.svg"
             }],
         url: 'https://joaosbarbosa.github.io/portfolio-barbosa/',
     },
@@ -33,15 +33,15 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'
+                tech: "/assets/icons/html.svg"
             },
             {
                 id: 3,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/02499bc2-439e-49cd-9dfa-44282de73b9f'
+                tech: "/assets/icons/css.svg"
             }],
         url: 'https://medicland.netlify.app/',
     },
@@ -55,11 +55,14 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/75e6aa86-6b7d-423a-9c1a-58d7e179d791'
+                tech: "/assets/icons/html.svg"
+            },  {
+                id: 3,
+                tech: "/assets/icons/sass.svg"
             },
         ],
         url: 'https://galerias.netlify.app/',
@@ -74,15 +77,15 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'
+                tech: "/assets/icons/html.svg"
             },
             {
                 id: 3,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/7d19d880-4a02-4a00-8c92-534fd82612e3'
+                tech: "/assets/icons/css.svg"
             }],
         url: 'https://cyberdynesystemv2.netlify.app/',
     },
@@ -96,20 +99,22 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/0f60d855-59cf-44ba-912b-9250b580d403'
+                tech: "/assets/icons/php.svg"
             },
             {
                 id: 3,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'
+                tech: "/assets/icons/css.svg"
             },
+
             {
-                id: 4,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/7d19d880-4a02-4a00-8c92-534fd82612e3'
-            }],
+                id: 3,
+                tech: "/assets/icons/html.svg"
+            }
+        ],
         url: 'https://bikcraft.joaosbarbosa.com.br/',
     }, {
         id: 6,
@@ -121,20 +126,25 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/0f60d855-59cf-44ba-912b-9250b580d403'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/4bf94fae-d28f-4a17-b843-de697c8aee65'
+                tech: "/assets/icons/php.svg"
             },
             {
                 id: 3,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'
+                tech: "/assets/icons/css.svg"
             },
             {
                 id: 4,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/7d19d880-4a02-4a00-8c92-534fd82612e3'
-            }],
+                tech: "/assets/icons/bootstrap.svg"
+            },
+            {
+                id: 5,
+                tech: "/assets/icons/html.svg"
+            }
+        ],
         url: 'https://github.com/JoaoSBarbosa/itaquaalerta',
     },
 
@@ -153,21 +163,17 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/0f60d855-59cf-44ba-912b-9250b580d403'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/4bf94fae-d28f-4a17-b843-de697c8aee65'
+                tech: "/assets/icons/css.svg"
             },
             {
                 id: 3,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'
-            },
-            {
-                id: 4,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/7d19d880-4a02-4a00-8c92-534fd82612e3'
-            }],
-        url: 'https://barbosapizzas.netlify.app/',
+                tech: "/assets/icons/html.svg"
+            }
+        ],        url: 'https://barbosapizzas.netlify.app/',
     },
 
     {
@@ -184,19 +190,15 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/0f60d855-59cf-44ba-912b-9250b580d403'
+                tech: "/assets/icons/javascript.svg"
             },
             {
                 id: 2,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/4bf94fae-d28f-4a17-b843-de697c8aee65'
+                tech: "/assets/icons/css.svg"
             },
             {
                 id: 3,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317'
-            },
-            {
-                id: 4,
-                tech: 'https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/7d19d880-4a02-4a00-8c92-534fd82612e3'
+                tech: "/assets/icons/html.svg"
             }
         ],
         url: 'https://joaosbarbosa.github.io/unit-converter',
@@ -212,15 +214,18 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/8676872d-a56b-44b3-9b64-38567ca77825"
+                tech: "/assets/icons/react.svg"
             },
             {
                 id: 2,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/2c7599b5-9e3d-4f65-8ff9-d0693f366317"
+                tech: "/assets/icons/css.svg"
+            },  {
+                id: 3,
+                tech: "/assets/icons/tailwindcss.svg"
             },
             {
-                id: 3,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/70d924d5-0fe3-4b45-96c1-452517ed9541"
+                id: 4,
+                tech: "/assets/icons/javascript.svg"
             }],
         url: 'https://playcinejb-fg65ejzx6-joaosbarbosa.vercel.app/',
     },
@@ -238,25 +243,25 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: "https://private-user-images.githubusercontent.com/87210017/337975005-1e501191-662a-40e9-9abd-beefdc03b90b.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDMyMjUsIm5iZiI6MTcxNzk0MjkyNSwicGF0aCI6Ii84NzIxMDAxNy8zMzc5NzUwMDUtMWU1MDExOTEtNjYyYS00MGU5LTlhYmQtYmVlZmRjMDNiOTBiLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA5VDE0MjIwNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQyY2NhOTk5YTY0ODUzMDAyMTQ1N2M2YjdkMzE4OTIzOGU2YjlmOWFmNjVmMDk1NTYzY2Q1ZmM4OGM5YWQwZWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.n1CaWkEBm8IxsR--Mvab6BpqimqYYYv0d-0QJh6LDGI"
+                tech: "/assets/icons/wordpress.svg"
             },
             {
                 id: 2,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/c299aea5-aa8d-4195-9443-c5edcfe66911"
+                tech: "/assets/icons/html.svg"
             },
             {
                 id: 3,
-                tech: "https://private-user-images.githubusercontent.com/87210017/337821308-70d924d5-0fe3-4b45-96c1-452517ed9541.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDM0MDQsIm5iZiI6MTcxNzk0MzEwNCwicGF0aCI6Ii84NzIxMDAxNy8zMzc4MjEzMDgtNzBkOTI0ZDUtMGZlMy00YjQ1LTk2YzEtNDUyNTE3ZWQ5NTQxLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA5VDE0MjUwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTViYWIzNGE4ZjhjNTExYzE5OWI0ZmMwZWZhODg1M2Q3MjQzZjMzYzcwYTM2YTc5YTk2YjVjMmZlN2NkZGExMDYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.4P1XVlT_G79dsr1xZkxQ4r7pf_T-A4BJ9cq1j6RHA60"
+                tech: "/assets/icons/css.svg"
             },
             {
                 id: 4,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/8b48a1fe-7a44-4e51-b1f6-7e0db4543875"
+                tech: "/assets/icons/php.svg"
             },
             {
                 id: 5,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/753fb2b1-19db-404c-bbdf-345abf63fd98"
+                tech: "/assets/icons/mysql.svg"
             }
-            ],
+        ],
         url: 'https://beerfanstore.com.br/',
     },
     {
@@ -269,25 +274,25 @@ export const ProjectList: ProjectType[] = [
         technologies: [
             {
                 id: 1,
-                tech: "https://private-user-images.githubusercontent.com/87210017/337975005-1e501191-662a-40e9-9abd-beefdc03b90b.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDMyMjUsIm5iZiI6MTcxNzk0MjkyNSwicGF0aCI6Ii84NzIxMDAxNy8zMzc5NzUwMDUtMWU1MDExOTEtNjYyYS00MGU5LTlhYmQtYmVlZmRjMDNiOTBiLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA5VDE0MjIwNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQyY2NhOTk5YTY0ODUzMDAyMTQ1N2M2YjdkMzE4OTIzOGU2YjlmOWFmNjVmMDk1NTYzY2Q1ZmM4OGM5YWQwZWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.n1CaWkEBm8IxsR--Mvab6BpqimqYYYv0d-0QJh6LDGI"
+                tech: "/assets/icons/wordpress.svg"
             },
             {
                 id: 2,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/c299aea5-aa8d-4195-9443-c5edcfe66911"
+                tech: "/assets/icons/html.svg"
             },
             {
                 id: 3,
-                tech: "https://private-user-images.githubusercontent.com/87210017/337821308-70d924d5-0fe3-4b45-96c1-452517ed9541.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDM0MDQsIm5iZiI6MTcxNzk0MzEwNCwicGF0aCI6Ii84NzIxMDAxNy8zMzc4MjEzMDgtNzBkOTI0ZDUtMGZlMy00YjQ1LTk2YzEtNDUyNTE3ZWQ5NTQxLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA5VDE0MjUwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTViYWIzNGE4ZjhjNTExYzE5OWI0ZmMwZWZhODg1M2Q3MjQzZjMzYzcwYTM2YTc5YTk2YjVjMmZlN2NkZGExMDYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.4P1XVlT_G79dsr1xZkxQ4r7pf_T-A4BJ9cq1j6RHA60"
+                tech: "/assets/icons/css.svg"
             },
             {
                 id: 4,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/8b48a1fe-7a44-4e51-b1f6-7e0db4543875"
+                tech: "/assets/icons/php.svg"
             },
             {
                 id: 5,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/753fb2b1-19db-404c-bbdf-345abf63fd98"
+                tech: "/assets/icons/mysql.svg"
             }
-            ],
+        ],
         url: 'https://byfanstore.com/',
     },
     {
@@ -299,28 +304,28 @@ export const ProjectList: ProjectType[] = [
         imagesExample: [
             {id: 1, imageUrl: "/catalog/wolf-store-example1.png"},
             {id: 2, imageUrl: "/catalog/wolf-store-example2.png"},
-            {id: 2, imageUrl: "/catalog/wolf-store-example3.png"},
+            {id: 3, imageUrl: "/catalog/wolf-store-example3.png"},
         ],
         description: 'Sistema de catálogo de produtos, onde é possível cadastrar, visualizar, atualizar e deletar produtos e categorias. Foi desenvolvido utilizando Java com Spring Boot.',
         technologies: [
             {
                 id: 1,
-                tech: "https://private-user-images.githubusercontent.com/87210017/337825793-93887f5a-2a39-4d1b-842c-4d2c2f7d4ab2.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDM0ODMsIm5iZiI6MTcxNzk0MzE4MywicGF0aCI6Ii84NzIxMDAxNy8zMzc4MjU3OTMtOTM4ODdmNWEtMmEzOS00ZDFiLTg0MmMtNGQyYzJmN2Q0YWIyLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA5VDE0MjYyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFkNDcyYjFjZTUwN2QxOWM1ZTNjOWJiMzBkOWUwNjQyN2UyMGRjMzE1NzUwOTc3MGNiZjYzOWRiZDYxNDhkZWQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.byqlCROTHTmmDjJqi4WwU3yDmRRW7Fm9gYnrjYi1VgY"
+                tech: "/assets/icons/java.svg"
             },
             {
                 id: 2,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/3911d2da-c923-4de1-a828-463a74ca60b9"
+                tech: "/assets/icons/spring.svg"
             },
             {
                 id: 3,
-                tech: "https://github.com/JoaoSBarbosa/barbosa-codev2/assets/87210017/8676872d-a56b-44b3-9b64-38567ca77825"
+                tech: "/assets/icons/react.svg"
             },
             {
                 id: 4,
-                tech: "https://private-user-images.githubusercontent.com/87210017/337826138-4bf94fae-d28f-4a17-b843-de697c8aee65.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc5NDM3MDUsIm5iZiI6MTcxNzk0MzQwNSwicGF0aCI6Ii84NzIxMDAxNy8zMzc4MjYxMzgtNGJmOTRmYWUtZDI4Zi00YTE3LWI4NDMtZGU2OTdjOGFlZTY1LnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA5VDE0MzAwNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEyZmZkOWU1N2QwMGRjNzhjMGY3NDExMWRhZDNkNDRlYzhkZTdjMDZhMDk5OTU3ZmQ0ZTU2NTAwY2ZjMzRiY2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.UKDqbDTqjOtj4bmpNAn0_CoOORxDEDkq6xNCUoT33Rk"
+                tech: "/assets/icons/bootstrap.svg"
             }
 
-            ],
+        ],
         url: 'https://github.com/JoaoSBarbosa/catalog-javaspring',
     },
 ];

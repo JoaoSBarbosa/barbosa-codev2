@@ -1,13 +1,23 @@
-.container {
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 3;
+    width: 100%;
+    padding: 10px;
+}
+.content {
     background-color: #111;
     color: #fff;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     border-radius: 8px;
     box-shadow: 0 10px 15px -3px rgba(105, 77, 248, 0.5),
     0 4px 6px -2px rgba(105, 77, 248, 0.5);
+
+
 }
 
 .message {
@@ -15,3 +25,11 @@
 }
 
 
+@media (max-width: 600px) {
+    .content {
+        width: 100%;
+        grid-column: span 3;
+        border: 2px solid rgba(105, 77, 248, 0.5);
+    }
+
+}

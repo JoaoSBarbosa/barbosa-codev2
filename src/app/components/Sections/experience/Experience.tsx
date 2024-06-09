@@ -21,7 +21,7 @@ export type ExperienceTechnologiesListType = {
 
 export const Experience = () => {
     return (
-            <Layout id={"experience"} position={Position.RELATIVE} textColor={TextColor.TEXT_WHITE} sectionTitle={"Experiência Profissional"} sectionSubTitle={"Histórico de Empregos e Projetos"}>
+            <Layout id={"experience"} marginTop={30} position={Position.RELATIVE} textColor={TextColor.TEXT_WHITE} sectionTitle={"Experiência Profissional"} sectionSubTitle={"Histórico de Empregos e Projetos"}>
                 <div className={styles.timelineContainer}>
                     <div className={styles.timeline}></div>
                     {ExperienceList.map((experience, index) => (

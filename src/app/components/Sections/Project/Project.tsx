@@ -171,7 +171,8 @@ export const Project = () => {
                     </>
 
                 ) : (
-                    <EmptyListMessage message="Nenhum projeto encontrado."/>)}
+                    <EmptyListMessage message="Nenhum projeto encontrado."/>)
+                }
 
             </motion.ul>
         </Layout>
