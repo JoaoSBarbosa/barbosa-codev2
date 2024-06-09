@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
+import {Layout, TextColor} from "@/app/components/Layout/Layout";
 
 export const ContactForm = () => {
+    const [emailSent, setEmailSent] = useState(false); // Estado para controlar se o email foi enviado com sucesso
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -28,8 +31,11 @@ export const ContactForm = () => {
             body: JSON.stringify(formData)
         }).then((response) => {
             if (response.ok) {
+                setEmailSent(true); // Define o estado para indicar que o email foi enviado com sucesso
+
                 console.log('Email enviado com sucesso!');
             } else {
+                setEmailSent(false); // Define o estado para indicar que houve uma falha no envio do email
                 console.log('Falha ao enviar o email.');
             }
         }).catch((error) => {
@@ -46,61 +52,72 @@ export const ContactForm = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-deep-gray">
-            <form onSubmit={handleSubmit} className="w-full max-w-lg p-8 space-y-6 bg-white rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold text-purple-custom">Contact Us</h2>
-                <div className="flex flex-col space-y-4">
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
-                    />
-                    <input
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
-                    />
-                    <input
-                        type="text"
-                        name="phone"
-                        placeholder="Phone (optional)"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
-                    />
-                    <button
-                        type="submit"
-                        className="px-4 py-2 font-bold text-white bg-purple-custom rounded-md hover:bg-purple-gray-custom focus:outline-none focus:ring-2 focus:ring-purple-custom"
-                    >
-                        Send
-                    </button>
-                </div>
-            </form>
-        </div>
+        <Layout
+            marginTop={100}
+            sectionTitle={"Contato"}
+            textColor={TextColor.TEXT_WHITE}
+            sectionSubTitle={"Entre em contato comigo através do email"}
+        >
+            <div className="flex items-start justify-center p-4 2xl:p-0  w-full">
+                <form onSubmit={handleSubmit} className="w-full  p-8 space-y-6 bg-dark-gray rounded-lg shadow-md">
+                    <h2 className="text-2xl font-bold text-purple-custom">Contato</h2>
+                    {emailSent && <p className="text-green-500">Email enviado com sucesso!</p>}
+                    {!emailSent && <p className="text-red-500">Falha ao enviar o email.</p>}
+                    <div className="flex flex-col space-y-4">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Nome"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="E-mail"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                        />
+                        <input
+                            type="text"
+                            name="subject"
+                            placeholder="Assunto"
+                            value={formData.subject}
+                            onChange={handleChange}
+                            required
+                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                        />
+                        <input
+                            type="text"
+                            name="phone"
+                            placeholder="Telefone (opcional)"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                        />
+                        <textarea
+                            name="message"
+                            placeholder="Messagem"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                        />
+                        <button
+                            type="submit"
+                            className="max-w-max px-4 py-2 font-bold text-white bg-purple-custom
+                            rounded-md hover:bg-purple-gray-custom focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                        >
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </Layout>
     );
 };

@@ -23,14 +23,14 @@
 // }
 
 "use client";
-import { RootSection } from "@/app/components/RootSecttion/RootSection";
-import React, { ReactNode, useEffect, useRef } from "react";
+import {RootSection} from "@/app/components/RootSecttion/RootSection";
+import React, {ReactNode, useEffect, useRef} from "react";
 import Header from "@/app/components/Sections/header/Header";
-import { BackgroundLayout } from "@/app/components/BackgroudLayout/BackgroundLayout";
-import { Skill } from "@/app/components/Sections/skill/Skill";
-import { Training } from "@/app/components/Sections/training/Training";
-import { Experience } from "@/app/components/Sections/experience/Experience";
-import { motion, useAnimation } from 'framer-motion';
+import {BackgroundLayout} from "@/app/components/BackgroudLayout/BackgroundLayout";
+import {Skill} from "@/app/components/Sections/skill/Skill";
+import {Training} from "@/app/components/Sections/training/Training";
+import {Experience} from "@/app/components/Sections/experience/Experience";
+import {motion, useAnimation} from 'framer-motion';
 import {SectionWrapper} from "@/app/components/Animations/SectionWrapper/SectionWrapper";
 import {Project} from "@/app/components/Sections/Project/Project";
 import {ContactForm} from "@/app/components/ContactForm/ContactForm";
@@ -38,24 +38,27 @@ import {ContactForm} from "@/app/components/ContactForm/ContactForm";
 export default function Home() {
     return (
         <RootSection>
-            <Header />
+            <Header/>
             <BackgroundLayout>
                 <SectionWrapper>
-                    <Skill />
+                    <Skill/>
                 </SectionWrapper>
                 <SectionWrapper>
-                    <Training />
+                    <Training/>
                 </SectionWrapper>
             </BackgroundLayout>
             <SectionWrapper>
-                <Experience />
+                <Experience/>
             </SectionWrapper>
             <SectionWrapper>
-                <Project />
+                <Project/>
             </SectionWrapper>
-            <SectionWrapper>
-                <ContactForm />
-            </SectionWrapper>
+            <BackgroundLayout>
+
+                <SectionWrapper>
+                    <ContactForm/>
+                </SectionWrapper>
+            </BackgroundLayout>
         </RootSection>
     );
 }
