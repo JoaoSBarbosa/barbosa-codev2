@@ -48,7 +48,7 @@
 
     .nav li a::after,
     .nav li a:hover::after {
-        content: none; /* Ou display: none; */
+        content: none;
         width: 0;
         height: 0;
         margin: 0;
@@ -69,11 +69,9 @@
         width: 100%;
     }
 
-    /* Outras regras... */
     .btnMobile {
         display: flex;
-        padding: 1rem;
-        font-size: 1.5rem;
+        padding: 0;
         border: none;
         background: none;
         color: #711CDB;
@@ -84,14 +82,14 @@
 
     .hamburger {
         display: block;
-        width: 40px;
+        width: 35px;
         border-top: 4px solid;
     }
 
     .hamburger::after,
     .hamburger::before {
         content: "";
-        width: 40px;
+        width: 35px;
         height: 4px;
         display: block;
         background: currentColor;
@@ -110,6 +108,6 @@
 
     .active .hamburger::after {
         transform: rotate(-135deg);
-        top: -11px;
+        top: -12px;
     }
 }

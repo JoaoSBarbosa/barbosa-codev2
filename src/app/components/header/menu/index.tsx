@@ -9,7 +9,7 @@ export const Menu = () => {
 
         <header className={"flex items-center justify-between p-4 mb-12 2xl:mb-20"}>
             <Link href={"../"} id={"logo"}>
-                <img src="/assets/img/logo.svg" alt="logo" className={"h-20"}/>
+                <img src="/assets/img/logo.svg" alt="logo" className={"h-14 2xl:h-20"}/>
             </Link>
 
             <nav className={`${styles.nav} ${isActive ? styles.active : ""}`}>
