@@ -120,6 +120,7 @@ export const Project = () => {
 
     return (
         <Layout
+            id={"projects"}
             marginTop={100}
             sectionTitle={"Projetos"}
             textColor={TextColor.TEXT_WHITE}

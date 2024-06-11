@@ -101,10 +101,6 @@
         grid-area: icons;
     }
 
-    /*.footerDesc {*/
-    /*    grid-column: span 1; !* Esta linha define a largura da coluna para 2 *!*/
-    /*}*/
-
 }
 @media (max-width: 1200px ) {
     .footerLogo img{

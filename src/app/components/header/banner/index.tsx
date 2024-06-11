@@ -74,7 +74,7 @@ export const Banner: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="flex text-gray-300 flex-col items-center"
         >
-            <div className={`${styles.introduction} text-white max-w-screen-xl mx-auto`}>
+            <div className={`${styles.introduction} text-white max-w-screen-xl mx-auto`} id={"about"}>
                 <div className={`${styles.introductionContent}`}>
                     <div className="flex flex-col justify-between mb-2 2xl:mb-6">
                         <h1>
