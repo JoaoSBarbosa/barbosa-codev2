@@ -11,7 +11,7 @@ export const RootSection = ({isDarkBackgroundColor,isBottomBoxShadow,isShadowCon
 
     return (
         <section
-            className={`${styles.rootContainer} pb-14`}>
+            className={`${styles.rootContainer} `}>
             <div className={`${styles.galaxyBackground}`}>
                 {[...Array(50)].map((_, index) => (
                     <div

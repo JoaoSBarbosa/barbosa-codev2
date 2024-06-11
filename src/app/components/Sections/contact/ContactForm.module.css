@@ -1,0 +1,17 @@
+.neuralAnimation {
+    background: linear-gradient(312deg, #3a3a3a 0%, #1a1a1a 50%, #2e2e2e 70%, #1a1a1a 100%);
+    background-size: 300% 300%;
+    animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

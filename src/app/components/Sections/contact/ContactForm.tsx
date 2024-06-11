@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Layout, TextColor} from "@/app/components/Layout/Layout";
-
+import styles from "./ContactForm.module.css";
 export const ContactForm = () => {
     const [emailSent, setEmailSent] = useState(false);
     const [emailError, setEmailError] = useState(false);
@@ -98,13 +98,14 @@ export const ContactForm = () => {
 
     return (
         <Layout
+            id={"contact"}
             marginTop={100}
             sectionTitle={"Contato"}
             textColor={TextColor.TEXT_WHITE}
             sectionSubTitle={"Vamos bater um papo! Estou aqui para ouvir suas ideias e projetos."}
         >
-            <div className="flex items-start justify-center p-4 2xl:p-0  w-full">
-                <form onSubmit={handleSubmit} className="w-full  p-8 space-y-6 bg-dark-gray rounded-lg shadow-md">
+            <div className={`rounded-md flex items-start justify-center p-4 2xl:p-0  w-full`}>
+                <form onSubmit={handleSubmit} className={`${styles.neuralAnimation} w-full  p-8 space-y-6 rounded-md shadow-md`}>
                     <h2 className="text-2xl font-bold text-purple-custom">Contato</h2>
                     {loading && <p className="text-yellow-500">Enviando email...</p>}
                     {emailSent && <p className="text-green-500">Email enviado com sucesso!</p>}
@@ -117,7 +118,7 @@ export const ContactForm = () => {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                            className="bg-dark-gray w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-custom"
                         />
                         <input
                             type="email"
@@ -126,7 +127,7 @@ export const ContactForm = () => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                            className="bg-dark-gray w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-custom"
                         />
                         <input
                             type="text"
@@ -135,7 +136,7 @@ export const ContactForm = () => {
                             value={formData.subject}
                             onChange={handleChange}
                             required
-                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                            className="bg-dark-gray w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-custom"
                         />
                         <input
                             type="text"
@@ -145,7 +146,7 @@ export const ContactForm = () => {
                             // onChange={handleChange}
                             onChange={handlePhoneChange}
                             maxLength={15}
-                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                            className="bg-dark-gray w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-custom"
                         />
                         <textarea
                             name="message"
@@ -153,12 +154,12 @@ export const ContactForm = () => {
                             value={formData.message}
                             onChange={handleChange}
                             required
-                            className="bg-dark-gray w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                            className="bg-dark-gray w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-custom"
                         />
                         <button
                             type="submit"
                             className="max-w-max px-4 py-2 font-bold text-white bg-purple-custom
-                            rounded-md hover:bg-purple-gray-custom focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                            rounded-md hover:bg-purple-gray-custom focus:outline-none focus:ring-1 focus:ring-purple-custom"
                         >
                             {loading ? 'Enviando...' : 'Enviar'}
 

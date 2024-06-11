@@ -1,0 +1,127 @@
+.footerBg {
+    background-color: #111111;
+    padding: 60px 1.25rem;
+}
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.footerDesc {
+    grid-column: span 2; /* Esta linha define a largura da coluna para 2 */
+}
+
+.footerContact {
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: Roboto, sans-serif;
+    color: #fff;
+}
+
+.footerContactList {
+    color: #b2b2b2;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    font-family: Poppins, sans-serif;
+
+}
+
+.credits a {
+    display: inline-block;
+    position: relative;
+}
+
+.credits a::after {
+    content: "";
+    background-color: #694DF8;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin-top: 4px;
+    transition: all ease 0.4s;
+    position: absolute;
+}
+
+.credits a:hover::after {
+    width: 100%;
+    color: #fff;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floatAnimation {
+    animation: float 4s ease-in-out infinite;
+}
+.footerLogo img{
+    height: 8rem;
+}
+.footerIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 1200px ) {
+    .footerContainer {
+        padding: 20px;
+        grid-template-areas:
+        "logo desc desc links icons"
+        /*"links links links links icons"*/
+
+    }
+
+    .footerLogo {
+        grid-area: logo;
+    }
+    .footerLogo img{
+        height: 7rem;
+    }
+    .footerDesc {
+        grid-area: desc;
+    }
+
+    .footerLink {
+        grid-area: links;
+    }
+
+    .footerIcons {
+        grid-area: icons;
+    }
+
+    /*.footerDesc {*/
+    /*    grid-column: span 1; !* Esta linha define a largura da coluna para 2 *!*/
+    /*}*/
+
+}
+@media (max-width: 1200px ) {
+    .footerLogo img{
+        height: 6rem;
+    }
+}
+
+@media (max-width: 800px ) {
+    .footerContainer {
+        grid-template-areas:
+        "logo logo logo logo logo"
+        "desc desc desc desc desc"
+        "links links links links links"
+        "icons icons icons icons icons";
+
+    }
+    .footerIcons {
+        align-items: start;
+    }
+}
