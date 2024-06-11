@@ -35,6 +35,7 @@ import {SectionWrapper} from "@/app/components/Animations/SectionWrapper/Section
 import {Project} from "@/app/components/Sections/Project/Project";
 import {ContactForm} from "@/app/components/Sections/contact/ContactForm";
 import {Footer} from "@/app/components/Sections/footer/Footer";
+import ScrollToTop from "@/app/components/ScrollToTop/ScrollToTop";
 
 export default function Home() {
     return (
@@ -61,6 +62,9 @@ export default function Home() {
             </BackgroundLayout>
             <SectionWrapper>
                 <Footer/>
+            </SectionWrapper>
+            <SectionWrapper>
+                <ScrollToTop /> {/* Adicione a seta para cima aqui */}
             </SectionWrapper>
         </RootSection>
     );
