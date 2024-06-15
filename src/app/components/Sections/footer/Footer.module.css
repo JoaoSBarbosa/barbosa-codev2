@@ -1,6 +1,14 @@
 .footerBg {
-    background-color: #111111;
-    padding: 60px 1.25rem;
+    /*background-color: #111111;*/
+    /*padding: 60px 1.25rem;*/
+
+    background: linear-gradient(to bottom, #1A1A1A, #111111, #000000);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
 }
 
 .footerContainer {

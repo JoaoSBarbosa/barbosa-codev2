@@ -3,48 +3,65 @@
     background-size: 300% 300%;
     animation: gradientAnimation 20s ease infinite;
 }
+.formContainer{
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+.inputContainer{
+    background: rgba(105, 77, 248, 0.3);
+    border-radius: 8px;
+}
 
-@keyframes gradientAnimation {
+/* Submit Button */
+.submitButton {
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: #694DF8;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.submitButton:hover {
+    background-color: #6F60C0;
+}
+.image {
+    animation: float 4s ease-in-out infinite;
+    transform: scaleX(-1);
+}
+
+
+@keyframes pulse {
     0% {
-        background-position: 0% 50%;
+        box-shadow: 0 0 0 0 rgba(147, 112, 219, 0.4);
     }
-    50% {
-        background-position: 100% 50%;
+    70% {
+        box-shadow: 0 0 20px 20px rgba(147, 112, 219, 0);
     }
     100% {
-        background-position: 0% 50%;
+        box-shadow: 0 0 0 0 rgba(147, 112, 219, 0);
     }
 }
 
 
 
-
-
-
-
-.stars{
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    box-shadow: 50px 30px white,
-    100px 80px white,
-    80px 120px white,
-    300px 20px white,
-    250px 130px white,
-    200px 50px white,
-    150px 100px white,
-    320px 100px white;
-    animation: anim-stars 10s linear infinite;
-
-}
-
-
-@keyframes anim-stars {
-    from {
-        transform: translateY(0px);
+@keyframes float {
+    0% {
+        transform: translateY(0) scaleX(-1);
     }
-    to {
-        transform: translateY(-150px);
+    50% {
+        transform: translateY(-10px) scaleX(-1);
+    }
+    100% {
+        transform: translateY(0) scaleX(-1);
     }
 }
+
+
 

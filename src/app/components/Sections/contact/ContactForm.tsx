@@ -173,11 +173,10 @@
 // };
 
 
-
-import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { Layout, TextColor } from "@/app/components/Layout/Layout";
+import React, {useState, ChangeEvent, FormEvent} from 'react';
+import {Layout, TextColor} from "@/app/components/Layout/Layout";
 import styles from "./ContactForm.module.css";
-import { FaUser, FaEnvelope, FaPhone, FaRegCommentDots } from 'react-icons/fa';
+import {FaUser, FaEnvelope, FaPhone, FaRegCommentDots, FaComment} from 'react-icons/fa';
 
 interface FormData {
     name: string;
@@ -284,29 +283,32 @@ export const ContactForm = () => {
             id={"contact"}
             marginTop={100}
             sectionTitle={"Contato"}
+            sectionSubTitle={"Converse comigo sobre propostas de emprego e projetos"}
             textColor={TextColor.TEXT_WHITE}
         >
-            {/*<div className={`rounded-md flex items-start justify-center p-4 2xl:p-0 w-full`}>*/}
 
-            <div className={` grid grid-cols-2 w-full mt-20`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8  w-full my-40 ${styles.background}`}>
+                <div className={" px-4"}>
+                    <h1 className="text-2xl font-bold">Dúvidas, propostas ou sugestões?</h1>
+                    <p className="mt-4 text-base">
 
-                <div>
+                        Estou pronto para colaborar em novos projetos e oportunidades. Envie-me um email e vamos
+                        discutir como posso contribuir para seus objetivos.
 
-                    <h1 className={"text-4xl"}>Do you have any questions?</h1>
-                    <p>Vamos bater um papo! Estou aqui para ouvir suas ideias e projetos.</p>
-                    <div>
-                        <img src={"/assets/header-img.svg"} className={"w-80"}/>
+                    </p>
+                    <div className="mt-8">
+                        <img src="/assets/header-img.svg" className={`${styles.image} w-36 2xl:w-60`} alt="Imagem de cabeçalho"/>
                     </div>
                 </div>
+                <form onSubmit={handleSubmit} className={` w-full p-4 2xl:p-0 2xl:px-8 space-y-6 rounded-md shadow-md`}>
 
-                <form onSubmit={handleSubmit}
-                      className={` w-full p-8 space-y-6 rounded-md shadow-md`}>
-                    {/*<h2 className="text-3xl font-bold text-purple-custom text-center">Entre em Contato</h2>*/}
+
                     {loading && <p className="text-yellow-500 text-center">Enviando email...</p>}
                     {emailSent && <p className="text-green-500 text-center">Email enviado com sucesso!</p>}
                     {emailError && <p className="text-red-500 text-center">Falha ao enviar o email.</p>}
-                    <div className="space-y-4">
-                        <div className="relative">
+                    <div className="space-y-4 ">
+
+                        <div className={`${styles.inputContainer} relative`}>
                             <FaUser className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="text"
@@ -315,10 +317,10 @@ export const ContactForm = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="bg-dark-gray w-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                                className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
-                        <div className="relative">
+                        <div className={`${styles.inputContainer} relative`}>
                             <FaEnvelope className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="email"
@@ -327,10 +329,10 @@ export const ContactForm = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="bg-dark-gray w-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                                className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
-                        <div className="relative">
+                        <div className={`${styles.inputContainer} relative`}>
                             <FaRegCommentDots className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="text"
@@ -339,10 +341,10 @@ export const ContactForm = () => {
                                 value={formData.subject}
                                 onChange={handleChange}
                                 required
-                                className="bg-dark-gray w-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                                className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
-                        <div className="relative">
+                        <div className={`${styles.inputContainer} relative`}>
                             <FaPhone className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="text"
@@ -351,29 +353,30 @@ export const ContactForm = () => {
                                 value={formData.phone}
                                 onChange={handlePhoneChange}
                                 maxLength={15}
-                                className="bg-dark-gray w-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                                className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
-                        <textarea
-                            name="message"
-                            placeholder="Mensagem"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                            className="bg-dark-gray w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-custom"
-                        />
+                        <div className={`${styles.inputContainer} relative`}>
+                            <FaComment className="absolute left-3 top-3 text-gray-500"/>
+                            <textarea
+                                name="message"
+                                placeholder="Mensagem"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                className={`outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md`}
+                            />
+                        </div>
                         <div className="flex justify-start w-full">
                             <button
                                 type="submit"
-                                className="text-start w-full px-4 py-2 font-bold text-white bg-purple-custom rounded-md hover:bg-purple-gray-custom focus:outline-none focus:ring-2 focus:ring-purple-custom"
+                                className={`${!loading && styles.submitButton} w-full px-4 py-2 font-bold text-white bg-purple-custom rounded-md hover:bg-purple-gray-custom focus:outline-none focus:ring-2 focus:ring-purple-custom`}
                             >
                                 {loading ? 'Enviando...' : 'Enviar e-mail'}
                             </button>
                         </div>
                     </div>
                 </form>
-
-
             </div>
         </Layout>
     );

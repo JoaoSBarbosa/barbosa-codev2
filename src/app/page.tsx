@@ -56,18 +56,13 @@ export default function Home() {
             <SectionWrapper>
                 <Project/>
             </SectionWrapper>
-            <BackgroundLayoutStart>
-                <SectionWrapper>
-                    <ContactForm/>
-                </SectionWrapper>
-            </BackgroundLayoutStart>
-
+            <SectionWrapper>
+                <ContactForm/>
+            </SectionWrapper>
             <SectionWrapper>
                 <Footer/>
             </SectionWrapper>
-            <SectionWrapper>
-                <ScrollToTop/> {/* Adicione a seta para cima aqui */}
-            </SectionWrapper>
+            <ScrollToTop/>
         </RootSection>
     );
 }
