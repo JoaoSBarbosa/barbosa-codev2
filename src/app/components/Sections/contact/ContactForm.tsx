@@ -179,11 +179,11 @@ import styles from "./ContactForm.module.css";
 import {FaUser, FaEnvelope, FaPhone, FaRegCommentDots, FaComment} from 'react-icons/fa';
 
 interface FormData {
-    name: string;
+    nome: string;
     email: string;
-    subject: string;
-    phone: string;
-    message: string;
+    assunto: string;
+    telefone: string;
+    mensagem: string;
 }
 
 export const ContactForm = () => {
@@ -192,11 +192,11 @@ export const ContactForm = () => {
     const [loading, setLoading] = useState(false);
 
     const [formData, setFormData] = useState<FormData>({
-        name: '',
+        nome: '',
         email: '',
-        subject: '',
-        phone: '',
-        message: ''
+        assunto: '',
+        telefone: '',
+        mensagem: ''
     });
 
     const validateEmail = (email: string): boolean => {
@@ -231,7 +231,7 @@ export const ContactForm = () => {
         }
         setFormData({
             ...formData,
-            phone: phone
+            telefone: phone
         });
     };
 
@@ -244,11 +244,11 @@ export const ContactForm = () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nome: formData.name,
+                nome: formData.nome,
                 email: formData.email,
-                assunto: formData.subject,
-                telefone: formData.phone,
-                mensagem: formData.message
+                assunto: formData.assunto,
+                telefone: formData.telefone,
+                mensagem: formData.mensagem
             })
         }).then((response) => {
             if (response.ok) {
@@ -270,11 +270,11 @@ export const ContactForm = () => {
         });
 
         setFormData({
-            name: '',
+            nome: '',
             email: '',
-            subject: '',
-            phone: '',
-            message: ''
+            assunto: '',
+            telefone: '',
+            mensagem: ''
         });
     };
 
@@ -314,7 +314,7 @@ export const ContactForm = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Nome"
-                                value={formData.name}
+                                value={formData.nome}
                                 onChange={handleChange}
                                 required
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
@@ -338,7 +338,7 @@ export const ContactForm = () => {
                                 type="text"
                                 name="subject"
                                 placeholder="Assunto"
-                                value={formData.subject}
+                                value={formData.assunto}
                                 onChange={handleChange}
                                 required
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
@@ -348,9 +348,9 @@ export const ContactForm = () => {
                             <FaPhone className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="text"
-                                name="phone"
+                                name="telefone"
                                 placeholder="Telefone (opcional)"
-                                value={formData.phone}
+                                value={formData.telefone}
                                 onChange={handlePhoneChange}
                                 maxLength={15}
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
@@ -359,9 +359,9 @@ export const ContactForm = () => {
                         <div className={`${styles.inputContainer} relative`}>
                             <FaComment className="absolute left-3 top-3 text-gray-500"/>
                             <textarea
-                                name="message"
+                                name="mensagem"
                                 placeholder="Mensagem"
-                                value={formData.message}
+                                value={formData.mensagem}
                                 onChange={handleChange}
                                 required
                                 className={`outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md`}
