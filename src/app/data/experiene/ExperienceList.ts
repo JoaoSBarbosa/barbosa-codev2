@@ -15,14 +15,14 @@ export const ExperienceList: ExperienceType[] = [
         technologies:
             [
                 {id: 1, technology: "react"},
-                {id: 2, technology: "javaScript"},
+                {id: 2, technology: "javascript"},
                 {id: 3, technology: "html"},
                 {id: 4, technology: "css"}
             ]
     },
     {
         id: 1,
-        startYear: 2022,
+        startYear: 2023,
         endYear: null,
         jobTitle: "Programador júnior",
         company: "Angulo Sistema",

@@ -36,6 +36,7 @@ import {Project} from "@/app/components/Sections/Project/Project";
 import {ContactForm} from "@/app/components/Sections/contact/ContactForm";
 import {Footer} from "@/app/components/Sections/footer/Footer";
 import ScrollToTop from "@/app/components/ScrollToTop/ScrollToTop";
+import {BackgroundLayoutStart} from "@/app/components/BackgroudLayoutStar/BackgroundLayoutStart";
 
 export default function Home() {
     return (
@@ -55,16 +56,17 @@ export default function Home() {
             <SectionWrapper>
                 <Project/>
             </SectionWrapper>
-            <BackgroundLayout>
+            <BackgroundLayoutStart>
                 <SectionWrapper>
                     <ContactForm/>
                 </SectionWrapper>
-            </BackgroundLayout>
+            </BackgroundLayoutStart>
+
             <SectionWrapper>
                 <Footer/>
             </SectionWrapper>
             <SectionWrapper>
-                <ScrollToTop /> {/* Adicione a seta para cima aqui */}
+                <ScrollToTop/> {/* Adicione a seta para cima aqui */}
             </SectionWrapper>
         </RootSection>
     );

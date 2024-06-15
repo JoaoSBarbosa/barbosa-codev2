@@ -49,7 +49,7 @@ type LayoutProps = {
 
 export const Layout = ({children,textColor,id, sectionTitle, marginBottom, marginTop, position, sectionSubTitle}: LayoutProps) => {
     return (
-        <div id={id} className={`${styles.layoutContainer} ${position} ${textColor}`} style={{
+        <div id={id} className={` ${styles.layoutContainer} ${position} ${textColor}`} style={{
             marginTop: marginTop ? marginTop : "",
             marginBottom: marginBottom ? marginBottom : "",
         }}>
