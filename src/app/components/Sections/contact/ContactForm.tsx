@@ -73,9 +73,9 @@ export const ContactForm = () => {
             body: JSON.stringify({
                 name: formData.name,
                 email: formData.email,
-                assunto: formData.subject,
-                telefone: formData.phone,
-                mensagem: formData.message
+                subject: formData.subject,
+                phone: formData.phone,
+                message: formData.message
             })
         }).then((response) => {
             if (response.ok) {
