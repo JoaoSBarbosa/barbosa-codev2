@@ -6,11 +6,11 @@ import styles from "./ContactForm.module.css";
 import {FaUser, FaEnvelope, FaPhone, FaRegCommentDots, FaComment} from 'react-icons/fa';
 
 interface FormData {
-    nome: string;
+    name: string;
     email: string;
-    assunto: string;
-    telefone: string;
-    mensagem: string;
+    subject: string;
+    phone: string;
+    message: string;
 }
 
 export const ContactForm = () => {
@@ -19,11 +19,11 @@ export const ContactForm = () => {
     const [loading, setLoading] = useState(false);
 
     const [formData, setFormData] = useState<FormData>({
-        nome: '',
+        name: '',
         email: '',
-        assunto: '',
-        telefone: '',
-        mensagem: ''
+        subject: '',
+        phone: '',
+        message: ''
     });
 
     const validateEmail = (email: string): boolean => {
@@ -58,7 +58,7 @@ export const ContactForm = () => {
         }
         setFormData({
             ...formData,
-            telefone: phone
+            phone: phone
         });
     };
 
@@ -71,11 +71,11 @@ export const ContactForm = () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nome: formData.nome,
+                name: formData.name,
                 email: formData.email,
-                assunto: formData.assunto,
-                telefone: formData.telefone,
-                mensagem: formData.mensagem
+                assunto: formData.subject,
+                telefone: formData.phone,
+                mensagem: formData.message
             })
         }).then((response) => {
             if (response.ok) {
@@ -97,11 +97,11 @@ export const ContactForm = () => {
         });
 
         setFormData({
-            nome: '',
+            name: '',
             email: '',
-            assunto: '',
-            telefone: '',
-            mensagem: ''
+            subject: '',
+            phone: '',
+            message: ''
         });
     };
 
@@ -139,9 +139,9 @@ export const ContactForm = () => {
                             <FaUser className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="text"
-                                name="nome"
+                                name="name"
                                 placeholder="Nome"
-                                value={formData.nome}
+                                value={formData.name}
                                 onChange={handleChange}
                                 required
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
@@ -163,9 +163,9 @@ export const ContactForm = () => {
                             <FaRegCommentDots className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="text"
-                                name="assunto"
+                                name="subject"
                                 placeholder="Assunto"
-                                value={formData.assunto}
+                                value={formData.subject}
                                 onChange={handleChange}
                                 required
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
@@ -175,9 +175,9 @@ export const ContactForm = () => {
                             <FaPhone className="absolute left-3 top-3 text-gray-500"/>
                             <input
                                 type="text"
-                                name="telefone"
+                                name="phone"
                                 placeholder="Telefone (opcional)"
-                                value={formData.telefone}
+                                value={formData.phone}
                                 onChange={handlePhoneChange}
                                 maxLength={15}
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
@@ -186,9 +186,9 @@ export const ContactForm = () => {
                         <div className={`${styles.inputContainer} relative`}>
                             <FaComment className="absolute left-3 top-3 text-gray-500"/>
                             <textarea
-                                name="mensagem"
+                                name="message"
                                 placeholder="Mensagem"
-                                value={formData.mensagem}
+                                value={formData.message}
                                 onChange={handleChange}
                                 required
                                 className={`outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md`}
