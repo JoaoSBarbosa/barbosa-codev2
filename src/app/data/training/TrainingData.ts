@@ -14,7 +14,7 @@ export const TrainingData: TrainingDataType[] =
             level: "TÉCNICO",
             course: "Técnico em Desenvolvimento de Sistema",
             institution: "ETEC",
-            technologies: ["javascript", "PHP","html", "css"],
+            technologies: ["javascript", "php","html", "css"],
         },
         {
             id: 3,
@@ -70,6 +70,22 @@ export const TrainingData: TrainingDataType[] =
             course: "Formação Desenvolvedor Java",
             institution: "UDEMY - Nélio Alves",
             technologies: ["java", "mysql","spring"],
+
+        },
+        {
+            id: 8,
+            level: "FORMAÇÃO CONTINUA",
+            course: "Curso de Spring Framework - Fundamentos",
+            institution: "TrainaWeb",
+            technologies: ["java", "mysql","spring","maven"],
+
+        },
+        {
+            id: 9,
+            level: "FORMAÇÃO CONTINUA",
+            course: "Microserviços e Mensageria com Spring Cloud e Docker",
+            institution: "UDEMY",
+            technologies: ["java", "mysql","spring","spring-cloud",'keycloak','docker','rabbitmq','spring-security'],
 
         },
     ]

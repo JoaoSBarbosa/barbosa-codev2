@@ -72,7 +72,7 @@ export const CardSkill: React.FC<CardSkillProps> = ({
                     </h3>
                     <div className={`${styles.cardToolsList}`}>
                         {tools.map((tool) => (
-                            <p key={tool.id}>{tool.title}</p>
+                            <p key={tool.id}>{tool.title}, </p>
                         ))}
                     </div>
                 </div>

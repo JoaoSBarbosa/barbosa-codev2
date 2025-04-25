@@ -50,7 +50,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, onClick}) => {
                 <h1>{project.title}</h1>
             </div>
             <div className={`${styles.ProjectCardImgContainer}`}>
-                <img src={`/assets/project/${project.coverImage}`} alt={project.coverImage}/>
+                <img src={`${project.isExternalImage ? "": ""} /assets/project/${project.coverImage}`} alt={project.coverImage}/>
             </div>
 
             <div className={`${styles.ProjectCardTechContainer} transition-all`}>

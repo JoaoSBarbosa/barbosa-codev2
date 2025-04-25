@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import {useEffect, useState} from 'react';
+import {motion} from 'framer-motion';
 import styles from "./Banner.module.css";
-import { MouseScrollAnimation } from "@/app/components/Animations/MouseScrollAnimation/MouseScrollAnimation";
+import {MouseScrollAnimation} from "@/app/components/Animations/MouseScrollAnimation/MouseScrollAnimation";
 
 export const Banner: React.FC = () => {
     const [currentLoopIndex, setCurrentLoopIndex] = useState<number>(0);
@@ -69,9 +69,9 @@ export const Banner: React.FC = () => {
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: -50}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
             className="flex text-gray-300 flex-col items-center"
         >
             <div className={`${styles.introduction} text-white max-w-screen-xl mx-auto`} id={"about"}>
@@ -93,10 +93,15 @@ export const Banner: React.FC = () => {
                         </h2>
                     </div>
                     <p>
-                        Desenvolvedor Full Stack Júnior apaixonado por criar soluções web inovadoras.
-                        Minhas habilidades abrangem o uso de tecnologias como Java, Spring, SQL,
-                        JavaScript e React. Estou comprometido em oferecer resultados excepcionais
-                        enquanto continuo a aprimorar minhas habilidades no desenvolvimento de software.
+                        {/*Desenvolvedor Full Stack Júnior apaixonado por criar soluções web inovadoras.*/}
+                        {/*Minhas habilidades abrangem o uso de tecnologias como Java, Spring, SQL,*/}
+                        {/*JavaScript e React. Estou comprometido em oferecer resultados excepcionais*/}
+                        {/*enquanto continuo a aprimorar minhas habilidades no desenvolvimento de software.*/}
+
+                        Desenvolvedor Full Stack Júnior com foco em Java, Spring, SQL, JavaScript e React.
+                        Experiência em criação de APIs, microsserviços e interfaces modernas.
+                        Sempre evoluindo e entregando soluções eficientes.
+
                     </p>
                 </div>
                 <div className={`${styles.introductionImage}`}>
@@ -108,7 +113,7 @@ export const Banner: React.FC = () => {
                     />
                 </div>
             </div>
-            {showScrollAnimation && <MouseScrollAnimation />}
+            {showScrollAnimation && <MouseScrollAnimation/>}
         </motion.div>
     );
 };

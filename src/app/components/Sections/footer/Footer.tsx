@@ -20,10 +20,13 @@ export const Footer = () => {
                         <h3 className="text-2xl text-white font-bold mb-4">Mais sobre mim</h3>
                         <div className={"flex flex-col gap-2"}>
                             <p className={`text-xl text-gray-400 `}>
-                                Desenvolvedor fullstack júnior com foco em Java, Spring, Next.js e
-                                React. Apaixonado por desenvolvimento web, busco constantemente novas
-                                habilidades em tecnologias como Node.js, C# e Angular para criar
-                                soluções inovadoras.
+                                {/*Desenvolvedor fullstack júnior com foco em Java, Spring, Next.js e*/}
+                                {/*React. Apaixonado por desenvolvimento web, busco constantemente novas*/}
+                                {/*habilidades em tecnologias como Node.js, C# e Angular para criar*/}
+                                {/*soluções inovadoras.*/}
+
+                                 Em constante evolução no ecossistema Java e JavaScript, ampliando conhecimentos com Node.js, C# e Angular para criar soluções modernas e eficientes.
+
                             </p>
                             <figure>
                                 <img src="/assets/header-img.svg" className={`mr-3 h-14 ${styles.floatAnimation}`} alt="Logo"/>

@@ -9,6 +9,7 @@ export type ProjectType ={
     title: string;
     description: string;
     url: string;
+    isExternalImage?: boolean;
     technologies: TechType[]
 }
 

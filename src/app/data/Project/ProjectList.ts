@@ -116,7 +116,8 @@ export const ProjectList: ProjectType[] = [
             }
         ],
         url: 'https://bikcraft.joaosbarbosa.com.br/',
-    }, {
+    },
+    {
         id: 6,
         title: 'Itaqua Alerta',
         coverImage: 'project12.png',
@@ -299,7 +300,7 @@ export const ProjectList: ProjectType[] = [
         id: 12,
         title: 'Catalogo React-Spring',
         coverImage: 'catalog/wolf-store-example1.png',
-        techCategory: 3,
+        techCategory: 2,
         projectCategory: 1,
         imagesExample: [
             {id: 1, imageUrl: "/catalog/wolf-store-example1.png"},
@@ -327,5 +328,48 @@ export const ProjectList: ProjectType[] = [
 
         ],
         url: 'https://github.com/JoaoSBarbosa/catalog-javaspring',
+    },
+    {
+        id: 13,
+        title: 'Microserviço -Emissão de Cartão de Cŕedito',
+        coverImage: '/ms/diagrama.png',
+        techCategory: 2,
+        projectCategory: 1,
+        imagesExample: [
+            {id: 1, imageUrl: "/ms/mensageria.png"},
+        ],
+        description: 'Projeto de uma aplicação baseado em microserviços projetada para ldiar com várias aspectos d egestão de clientes e serviços de créditro, incluimdo registros de clienets, emissão de cartões de credito, analsie de credito e gestão de credito. Desenvolvio com Spring CLoud,Spring Gateway, Docker, RabbMQ,KeyCloeak, Eureka Server e CLient, Spring Boot.',
+        technologies: [
+            {
+                id: 1,
+                tech: "/assets/icons/java.svg"
+            },
+            {
+                id: 2,
+                tech: "/assets/icons/spring.svg"
+            },
+            {
+                id: 3,
+                tech: "/assets/icons/spring-cloud.svg"
+            },
+            {
+                id: 4,
+                tech: "/assets/icons/rabbitmq.svg"
+            },
+            {
+                id: 5,
+                tech: "/assets/icons/maven.svg"
+            },
+            {
+                id: 6,
+                tech: "/assets/icons/keycloak.svg"
+            },
+            {
+                id: 7,
+                tech: "/assets/icons/docker.svg"
+            }
+
+        ],
+        url: 'https://github.com/JoaoSBarbosa/spring-microservices-credit',
     },
 ];
