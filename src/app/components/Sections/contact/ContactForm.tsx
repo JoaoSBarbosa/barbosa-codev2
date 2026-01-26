@@ -1,9 +1,13 @@
-
-
-import React, {useState, ChangeEvent, FormEvent} from 'react';
-import {Layout, TextColor} from "@/app/components/Layout/Layout";
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { Layout, TextColor } from "@/app/components/Layout/Layout";
 import styles from "./ContactForm.module.css";
-import {FaUser, FaEnvelope, FaPhone, FaRegCommentDots, FaComment} from 'react-icons/fa';
+import {
+    FaUser,
+    FaEnvelope,
+    FaPhone,
+    FaRegCommentDots,
+    FaComment
+} from 'react-icons/fa';
 
 interface FormData {
     name: string;
@@ -26,23 +30,9 @@ export const ContactForm = () => {
         message: ''
     });
 
-    const validateEmail = (email: string): boolean => {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    };
-
-    const formatPhoneNumber = (value: string): string => {
-        let cleaned = ('' + value).replace(/\D/g, '');
-        cleaned = cleaned.replace(/^(\d{2})/, '($1) ');
-        if (cleaned.length > 13) {
-            cleaned = cleaned.replace(/(\d{5})(\d{4})/, '$1-$2');
-        } else {
-            cleaned = cleaned.replace(/(\d{4})(\d{4})/, '$1-$2');
-        }
-        return cleaned;
-    };
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (
+        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -51,92 +41,110 @@ export const ContactForm = () => {
 
     const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
         let phone = e.target.value.replace(/\D/g, '');
+
         if (phone.length === 11) {
             phone = phone.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
         } else if (phone.length === 10) {
             phone = phone.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3');
         }
+
         setFormData({
             ...formData,
-            phone: phone
+            phone
         });
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
-        fetch('https://barbosacode-server.vercel.app/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: formData.name,
-                email: formData.email,
-                subject: formData.subject,
-                phone: formData.phone,
-                message: formData.message
-            })
-        }).then((response) => {
-            if (response.ok) {
-                setLoading(false);
-                setEmailSent(true);
-                setEmailError(false);
-                console.log('Email enviado com sucesso!');
-            } else {
-                setLoading(false);
-                setEmailSent(false);
-                setEmailError(true);
-                console.log('Falha ao enviar o email.');
-            }
-        }).catch((error) => {
-            setLoading(false);
-            setEmailSent(false);
-            setEmailError(true);
-            console.error('Error:', error);
-        });
+        setEmailSent(false);
+        setEmailError(false);
 
-        setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            phone: '',
-            message: ''
-        });
+        try {
+            const response = await fetch(
+                'https://barbosa-codev2-node.vercel.app/api',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error('Erro ao enviar email');
+            }
+
+            setEmailSent(true);
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                phone: '',
+                message: ''
+            });
+        } catch (error) {
+            console.error(error);
+            setEmailError(true);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
         <Layout
-            id={"contact"}
+            id="contact"
             marginTop={100}
-            sectionTitle={"Contato"}
-            sectionSubTitle={"Converse comigo sobre propostas de emprego e projetos"}
+            sectionTitle="Contato"
+            sectionSubTitle="Converse comigo sobre propostas de emprego e projetos"
             textColor={TextColor.TEXT_WHITE}
         >
+            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 w-full my-40`}>
+                <div className="px-4">
+                    <h1 className="text-2xl font-bold">
+                        Dúvidas, propostas ou sugestões?
+                    </h1>
 
-            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8  w-full my-40 ${styles.background}`}>
-                <div className={" px-4"}>
-                    <h1 className="text-2xl font-bold">Dúvidas, propostas ou sugestões?</h1>
                     <p className="mt-4 text-base">
-
-                        Estou pronto para colaborar em novos projetos e oportunidades. Envie-me um email e vamos
-                        discutir como posso contribuir para seus objetivos.
-
+                        Estou pronto para colaborar em novos projetos e oportunidades.
+                        Envie-me um email e vamos discutir como posso contribuir.
                     </p>
+
                     <div className="mt-8">
-                        <img src="/assets/header-img.svg" className={`${styles.image} w-36 2xl:w-60`} alt="Imagem de cabeçalho"/>
+                        <img
+                            src="/assets/header-img.svg"
+                            className={`${styles.image} w-36 2xl:w-60`}
+                            alt="Imagem de cabeçalho"
+                        />
                     </div>
                 </div>
-                <form onSubmit={handleSubmit} className={` w-full p-4 2xl:p-0 2xl:px-8 space-y-6 rounded-md shadow-md`}>
 
+                <form
+                    onSubmit={handleSubmit}
+                    className="w-full p-4 2xl:p-0 2xl:px-8 space-y-6 rounded-md shadow-md"
+                >
+                    {loading && (
+                        <p className="text-yellow-500 text-center">
+                            Enviando email...
+                        </p>
+                    )}
 
-                    {loading && <p className="text-yellow-500 text-center">Enviando email...</p>}
-                    {emailSent && <p className="text-green-500 text-center">Email enviado com sucesso!</p>}
-                    {emailError && <p className="text-red-500 text-center">Falha ao enviar o email.</p>}
-                    <div className="space-y-4 ">
+                    {emailSent && (
+                        <p className="text-green-500 text-center">
+                            Email enviado com sucesso!
+                        </p>
+                    )}
 
+                    {emailError && (
+                        <p className="text-red-500 text-center">
+                            Falha ao enviar o email.
+                        </p>
+                    )}
+
+                    <div className="space-y-4">
                         <div className={`${styles.inputContainer} relative`}>
-                            <FaUser className="absolute left-3 top-3 text-gray-500"/>
+                            <FaUser className="absolute left-3 top-3 text-gray-500" />
                             <input
                                 type="text"
                                 name="name"
@@ -147,8 +155,9 @@ export const ContactForm = () => {
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
+
                         <div className={`${styles.inputContainer} relative`}>
-                            <FaEnvelope className="absolute left-3 top-3 text-gray-500"/>
+                            <FaEnvelope className="absolute left-3 top-3 text-gray-500" />
                             <input
                                 type="email"
                                 name="email"
@@ -159,8 +168,9 @@ export const ContactForm = () => {
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
+
                         <div className={`${styles.inputContainer} relative`}>
-                            <FaRegCommentDots className="absolute left-3 top-3 text-gray-500"/>
+                            <FaRegCommentDots className="absolute left-3 top-3 text-gray-500" />
                             <input
                                 type="text"
                                 name="subject"
@@ -171,8 +181,9 @@ export const ContactForm = () => {
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
+
                         <div className={`${styles.inputContainer} relative`}>
-                            <FaPhone className="absolute left-3 top-3 text-gray-500"/>
+                            <FaPhone className="absolute left-3 top-3 text-gray-500" />
                             <input
                                 type="text"
                                 name="phone"
@@ -183,25 +194,26 @@ export const ContactForm = () => {
                                 className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
+
                         <div className={`${styles.inputContainer} relative`}>
-                            <FaComment className="absolute left-3 top-3 text-gray-500"/>
+                            <FaComment className="absolute left-3 top-3 text-gray-500" />
                             <textarea
                                 name="message"
                                 placeholder="Mensagem"
                                 value={formData.message}
                                 onChange={handleChange}
                                 required
-                                className={`outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md`}
+                                className="outline-none bg-transparent w-full pl-10 pr-4 py-2 rounded-md"
                             />
                         </div>
-                        <div className="flex justify-start w-full">
-                            <button
-                                type="submit"
-                                className={`${!loading && styles.submitButton} w-full px-4 py-2 font-bold text-white bg-purple-custom rounded-md hover:bg-purple-gray-custom focus:outline-none focus:ring-2 focus:ring-purple-custom`}
-                            >
-                                {loading ? 'Enviando...' : 'Enviar e-mail'}
-                            </button>
-                        </div>
+
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className={`${!loading && styles.submitButton} w-full px-4 py-2 font-bold text-white bg-purple-custom rounded-md`}
+                        >
+                            {loading ? 'Enviando...' : 'Enviar e-mail'}
+                        </button>
                     </div>
                 </form>
             </div>
