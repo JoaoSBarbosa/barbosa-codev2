@@ -93,13 +93,13 @@ export const Banner: React.FC = () => {
             </h2>
           </div>
           <p>
-            {/*Desenvolvedor Full Stack Júnior apaixonado por criar soluções web inovadoras.*/}
-            {/*Minhas habilidades abrangem o uso de tecnologias como Java, Spring, SQL,*/}
-            {/*JavaScript e React. Estou comprometido em oferecer resultados excepcionais*/}
-            {/*enquanto continuo a aprimorar minhas habilidades no desenvolvimento de software.*/}
-            Desenvolvedor Full Stack Júnior com foco em Java, Spring, SQL, JavaScript e React.
-            Experiência em criação de APIs, microsserviços e interfaces modernas. Sempre evoluindo e
-            entregando soluções eficientes.
+            Sou Desenvolvedor Full Stack Pleno, com mais de 4 anos de 
+            experiência na construção de sistemas robustos, escaláveis e 
+            bem arquitetados. Atuo principalmente no backend com Java e 
+            Spring Boot, além de C# com .NET, e no frontend com React, 
+            Next.js e Angular. Valorizo código limpo, boas práticas, 
+            testabilidade, performance e segurança, utilizando também 
+            Docker para padronização de ambientes e apoio ao processo de deploy.
           </p>
         </div>
         <div className={`${styles.introductionImage}`}>
