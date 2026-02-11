@@ -4,7 +4,7 @@ export const TrainingData: TrainingDataType[] =
     [
         {
             id: 1,
-            level: "TECNÓLOGO",
+            level: "SUPERIOR",
             course: "Análise e Desenvolvimento de Sistema",
             institution: "UNINTER",
             technologies: ["java", "spring", "mysql"], // Adicione as tecnologias associadas

@@ -24,7 +24,7 @@ export const ExperienceList: ExperienceType[] = [
         id: 2,
         startYear: 2023,
         endYear: 2025,
-        jobTitle: "Programador júnior",
+        jobTitle: "Programador júnior II",
         company: "Angulo Sistema",
         description: "Responsável pelo desenvolvimento backend Java, aplicando camadas service, controller, repository, " +
             "DAO, e métodos CRUD para processar requisições. No frontend, emprego React, Next, TypeScript, Tailwind, e " +
