@@ -1,101 +1,113 @@
-## Getting Started
-
-Primeiro, execute o servidor de desenvolvimento:
-
-```bash
-npm run dev
-# ou
-yarn dev
-# ou
-pnpm dev
-# ou
-bun dev
-```
-
-Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o resultado.
-
-Você pode começar a editar a página modificando `app/page.tsx`. A página é atualizada automaticamente conforme você edita o arquivo.
-
-Este projeto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para otimizar e carregar automaticamente o Inter, uma fonte personalizada do Google.
-
-## Sobre o projeto
-
-```markdown
 # Barbosa Code
 
-Bem-vindo ao Barbosa Code, um projeto de portfólio desenvolvido para mostrar minhas habilidades e projetos. Este portfólio foi construído utilizando React, Next.js e Tailwind CSS, seguindo as melhores práticas de desenvolvimento e utilizando hooks do React.
+Portfólio profissional de João Barbosa, desenvolvido com Next.js, TypeScript e Tailwind CSS.
 
-## Tecnologias Utilizadas
+O projeto apresenta trajetória profissional, experiências, competências técnicas, projetos, formação e um canal de contato integrado a uma API Node para envio de email.
 
-- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **Next.js**: Framework React para aplicações web modernas.
-- **Tailwind CSS**: Framework CSS utilitário para estilização rápida e eficiente.
-- **Hooks do React**: Utilizados para gerenciamento de estado e ciclo de vida de componentes funcionais.
+## Stack
+
+- Next.js 16
+- React 18
+- TypeScript
+- Tailwind CSS
+- Lucide React
+- Sonner
 
 ## Funcionalidades
 
-- **Página Inicial**: Uma visão geral dos meus projetos e habilidades.
-- **Sobre Mim**: Uma seção detalhada sobre minha experiência e formação.
-- **Projetos**: Uma coleção dos meus principais projetos, com descrições e links para os repositórios.
-- **Contato**: Um formulário para que visitantes possam entrar em contato comigo.
+- Home responsiva com apresentação profissional.
+- Seções de sobre, experiências, projetos, tecnologias e formação.
+- Páginas internas para trajetória e projetos.
+- Alternância entre tema claro e escuro.
+- Formulário de contato com envio para API Node.
+- Toasts para feedback de ações, incluindo envio de email.
+- Header com logo e favicon configurado no App Router.
 
-## Instalação
+## Requisitos
 
-Para executar este projeto localmente, siga os passos abaixo:
+- Node.js 20 ou superior.
+- npm.
 
-1. Clone o repositório:
+## Como Rodar
 
-   git clone https://github.com/JoaoSBarbosa/barbosa-codeV2.git
+Instale as dependências:
+
+```bash
+npm install
 ```
 
-2. Instale as dependências:
+Execute o servidor de desenvolvimento:
 
-   ```bash
-   cd barbosa-code
-   npm install
-   ```
+```bash
+npm run dev
+```
 
-3. Execute o servidor de desenvolvimento:
+Acesse:
 
-   ```bash
-   npm run dev
-   ```
+```text
+http://localhost:3000
+```
 
-4. Abra seu navegador em `http://localhost:3000` para ver o projeto.
+Se a porta 3000 estiver ocupada, o Next.js pode iniciar em outra porta disponível.
 
-## Contribuição
+## Scripts
 
-Se você quiser contribuir para este projeto, siga os passos abaixo:
+```bash
+npm run dev
+```
 
-1. Fork o repositório.
-2. Crie uma branch para sua feature ou correção de bug:
+Inicia o servidor local de desenvolvimento.
 
-   ```bash
-   git checkout -b feature/nome-da-feature
-   ```
+```bash
+npm run build
+```
 
-3. Commit suas alterações:
+Gera a build de produção e valida TypeScript.
 
-   ```bash
-   git commit -m 'Adiciona nova feature'
-   ```
+```bash
+npm run start
+```
 
-4. Envie para a branch:
+Executa a aplicação em modo produção após a build.
 
-   ```bash
-   git push origin feature/nome-da-feature
-   ```
+## Estrutura
 
-5. Abra um Pull Request.
+```text
+src/app
+```
 
-## Licença
+Rotas e layouts do App Router.
 
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+```text
+src/sections
+```
+
+Seções principais do portfólio.
+
+```text
+src/shared
+```
+
+Componentes, layout e utilitários compartilhados.
+
+```text
+src/styles
+```
+
+Estilos globais, tema e Tailwind.
+
+```text
+public/assets
+```
+
+Imagens e arquivos públicos usados pela interface.
 
 ## Contato
 
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato comigo através do [LinkedIn](https://www.linkedin.com/in/devjbarbosa/)
+- LinkedIn: https://www.linkedin.com/in/devjbarbosa/
+- GitHub: https://github.com/JoaoSBarbosa
+- Email: dev.joaobarbosa@gmail.com
 
----
+## Licença
 
-Obrigado por visitar meu portfólio!
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE).

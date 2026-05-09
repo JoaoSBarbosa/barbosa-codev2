@@ -1,22 +1,26 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import type {Metadata} from "next";
+import type {ReactNode} from "react";
+import {Providers} from "../shared/components/Providers";
+import "../styles/index.css";
 
 export const metadata: Metadata = {
-  title: "João Barbosa",
-  description: "Portfólio profissional desenvolvedor fullstack",
+    title: "Portfólio de João Barbosa",
+    description:
+        "Portfólio moderno e responsivo de João Barbosa. Desenvolvido com Next.js, TypeScript e Tailwind CSS.",
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+export default function RootLayout({children}: { children: ReactNode }) {
+    return (
+        <html lang="pt-BR" suppressHydrationWarning>
+        <body
+            className="min-h-screen bg-background text-foreground antialiased"
+            suppressHydrationWarning
+        >
+        <Providers>{children}</Providers>
+        </body>
+        </html>
+    );
 }

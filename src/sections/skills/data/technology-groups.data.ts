@@ -1,0 +1,56 @@
+import {TechnologyGroup} from "@/sections/skills/types/technology-groups.type";
+
+export const technologyGroups: TechnologyGroup[] = [
+    {
+        id: 1,
+        title: "Frontend",
+        icon: "code",
+        items: [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript",
+            "Vue.js",
+            "Tailwind CSS",
+            "HTML5",
+            "CSS3",
+            "Sass",
+            "Redux",
+        ],
+    },
+    {
+        id: 2,
+        title: "Backend",
+        icon: "database",
+        items: [
+            "Java",
+            "Spring Boot",
+            "C#",
+            ".NET",
+            "ASP.NET",
+            "PostgreSQL",
+            "MySQL",
+            "SQL Server",
+            "MongoDB",
+            "REST API",
+            "WebSocket",
+        ],
+    },
+    {
+        id: 3,
+        title: "Ferramentas",
+        icon: "wrench",
+        items: [
+            "Docker",
+            "Azure",
+            "RabbitMQ",
+            "ActiveMQ",
+            "Git",
+            "GitHub",
+            "Linux",
+            "Figma",
+            "VS Code",
+            "JetBrain",
+        ],
+    },
+];
