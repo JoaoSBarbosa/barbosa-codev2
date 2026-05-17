@@ -15,7 +15,7 @@ function BrandLink() {
     return (
         <a
             href="/#conteudo"
-            className={`flex h-16 w-44 items-center rounded-md transition-opacity hover:opacity-90 sm:w-56 ${focusStyles}`}
+            className={`flex h-12 w-32 items-center rounded-md transition-opacity hover:opacity-90 sm:h-14 sm:w-44 lg:h-16 lg:w-56 ${focusStyles}`}
             aria-label="Ir para o início"
         >
             <Image
@@ -42,7 +42,9 @@ function NavigationLink({
     return (
         <a
             href={href}
-            className={`rounded-md px-3 py-2 text-sm font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white ${focusStyles}`}
+            className={`relative rounded-md px-3 py-2 text-sm lg:text-lg font-medium text-muted-foreground transition-colors hover:bg-foreground/10 hover:text-foreground ${focusStyles}
+            md:after:absolute md:after:left-3 md:after:right-3 md:after:bottom-1 md:after:h-0.5 md:after:bg-primary md:after:origin-left md:after:scale-x-0 md:after:transition-transform md:after:duration-200
+            md:hover:after:scale-x-100 md:focus-visible:after:scale-x-100`}
             onClick={onClick}
         >
             {item.label}
@@ -75,7 +77,7 @@ function MobileMenuButton({
     return (
         <button
             type="button"
-            className={`flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 ${focusStyles}`}
+            className={`flex h-11 w-11 items-center justify-center rounded-md text-foreground transition-colors hover:bg-foreground/10 ${focusStyles}`}
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
@@ -105,7 +107,7 @@ function MobileNavigation({onNavigate}: { onNavigate: () => void }) {
     return (
         <div
             id="mobile-navigation"
-            className="border-t border-white/10 bg-[#151326] shadow-lg md:hidden"
+            className="border-t border-border bg-background shadow-lg md:hidden"
         >
             <div className="container mx-auto flex flex-col gap-1 px-4 py-4">
                 {navigationItems.map((item) => (
@@ -120,7 +122,7 @@ export function Navigation() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 border-b border-white/10 bg-[#151326] shadow-sm">
+        <header className="section-band-dark sticky top-0 z-50 py-4 border-border bg-background shadow-sm">
             <nav
                 className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-6 lg:px-8"
                 aria-label="Navegação principal"

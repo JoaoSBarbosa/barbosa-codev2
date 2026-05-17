@@ -14,11 +14,12 @@ export function HeroSection() {
 
     return (
         <Section
-            className="relative flex min-h-[calc(100vh-4rem)] items-center bg-gradient-to-b from-background to-muted/20 pt-10">
+            tone="dark"
+            className="relative flex min-h-[calc(100vh-4rem)] items-center pt-10">
             <div className="grid w-full items-center gap-12 lg:grid-cols-2">
                 <div>
 
-                    <h1 className="mb-6 max-w-4xl text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl">
+                    <h1 className="mb-6 max-w-4xl text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
                         {hero.title}
                     </h1>
                     <p className="mb-4 text-xl font-semibold text-primary md:text-2xl">
@@ -28,11 +29,41 @@ export function HeroSection() {
                         {hero.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-4">
-                        <Button variant="primary" size="lg" href="#projetos">
+                    <div className="relative mb-8 lg:hidden">
+                        <div className="relative mx-auto aspect-square w-full max-w-sm">
+                            <div
+                                className="absolute inset-0 rotate-6 rounded-2xl bg-gradient-to-br from-primary/25 to-primary/10"
+                            />
+                            <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
+                                <Image
+                                    src={hero.image}
+                                    alt="Retrato estilizado do desenvolvedor"
+                                    width={820}
+                                    height={820}
+                                    priority
+                                    quality={72}
+                                    sizes="(max-width: 1024px) 80vw, 32rem"
+                                    className="h-full w-full object-cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
+                        <Button
+                            variant="primary"
+                            size="md"
+                            href="#projetos"
+                            className="w-full px-4 py-2 text-sm sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
+                        >
                             Ver Projetos
                         </Button>
-                        <Button variant="outline" size="lg" href="#contato">
+                        <Button
+                            variant="outline"
+                            size="md"
+                            href="#contato"
+                            className="w-full px-4 py-2 text-sm sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
+                        >
                             Entrar em Contato
                         </Button>
                     </div>
@@ -45,7 +76,7 @@ export function HeroSection() {
                             aria-label="Abrir perfil no GitHub"
                             rel="noopener noreferrer"
                             icon={GithubIcon}
-                            iconColor="#3E27B3"
+                            iconClassName="text-primary"
                         />
                         <IconBadge
                             as="a"
@@ -54,14 +85,14 @@ export function HeroSection() {
                             aria-label="Abrir perfil no LinkedIn"
                             rel="noopener noreferrer"
                             icon={LinkedinIcon}
-                            iconColor="#3E27B3"
+                            iconClassName="text-primary"
                         />
                         <IconBadge
                             as="a"
                             href={email.href}
                             aria-label="Enviar email"
                             icon={Mail}
-                            iconColor="#3E27B3"
+                            iconClassName="text-primary"
                         />
                     </div>
                 </div>

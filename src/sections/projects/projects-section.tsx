@@ -10,7 +10,7 @@ export function ProjectsSection() {
     const featuredProjects = projects.slice(0, 3);
 
     return (
-        <Section id="projetos" className="bg-background">
+        <Section id="projetos" tone="light">
             <SectionInfo
                 titleSize={"text-xl"}
                 title={projectsSectionInfo.title}

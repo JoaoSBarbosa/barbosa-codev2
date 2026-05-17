@@ -9,7 +9,7 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-[#151326] py-12 text-white">
+    <footer className="section-band-dark border-t border-border bg-background py-12 text-foreground">
       <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="text-center md:text-left">
@@ -24,7 +24,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir GitHub de Joao Barbosa"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 transition-colors hover:bg-primary-foreground/20"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground/10 transition-colors hover:bg-foreground/20"
               >
                 <GithubIcon className="h-5 w-5" />
               </a>
@@ -35,7 +35,7 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir LinkedIn de Joao Barbosa"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 transition-colors hover:bg-primary-foreground/20"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground/10 transition-colors hover:bg-foreground/20"
               >
                 <LinkedinIcon className="h-5 w-5" />
               </a>
@@ -44,7 +44,7 @@ export function SiteFooter() {
               <a
                 href={email.href}
                 aria-label="Enviar email para Joao Barbosa"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 transition-colors hover:bg-primary-foreground/20"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground/10 transition-colors hover:bg-foreground/20"
               >
                 <Mail className="h-5 w-5" />
               </a>
@@ -52,7 +52,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
+        <div className="mt-8 border-t border-border pt-8 text-center">
           <p className="text-sm opacity-80">
             © {year} Joao Barbosa. Todos os direitos reservados.
           </p>

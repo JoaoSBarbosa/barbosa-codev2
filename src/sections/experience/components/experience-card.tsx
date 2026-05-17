@@ -22,11 +22,11 @@ export function ExperienceCard({
 
     return (
         <article
-            className={`relative flex items-start gap-4 md:gap-8 mb-12 md:mb-16 last:mb-0 ${
+            className={`relative mb-12 last:mb-0 flex flex-col gap-4 md:mb-16 md:items-start md:gap-8 ${
                 isLeft ? "md:flex-row" : "md:flex-row-reverse"
-            } flex-row`}
+            }`}
         >
-            <div className="flex-1 md:max-w-[calc(50%-2rem)]">
+            <div className="w-full flex-1 md:max-w-[calc(50%-2rem)]">
                 <div
                     className="rounded-lg border border-border bg-card p-6 transition-shadow duration-200 hover:shadow-lg">
                     <div className="flex items-start gap-3 mb-3">
@@ -49,7 +49,7 @@ export function ExperienceCard({
                 </div>
             </div>
 
-            <div className="relative flex-shrink-0">
+            <div className="relative hidden flex-shrink-0 md:block">
                 <div className="w-4 h-4 rounded-full bg-primary border-4 border-background ring-4 ring-primary/20"/>
             </div>
 

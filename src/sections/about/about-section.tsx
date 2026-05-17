@@ -19,7 +19,7 @@ const competencyIcons: Record<string, LucideIcon> = {
 
 export function AboutSection() {
   return (
-    <Section id="sobre" className="bg-background">
+    <Section id="sobre" tone="light">
       <div className="mx-auto ">
         <h2 className="mb-6 text-3xl font-bold md:text-4xl">Sobre Mim</h2>
         <div className="space-y-4 leading-relaxed text-muted-foreground">

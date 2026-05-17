@@ -11,7 +11,7 @@ const educationIcons: Record<string, LucideIcon> = {
 
 export function EducationSection() {
     return (
-        <Section id="formacao" className="bg-background">
+        <Section id="formacao" tone="light">
 
             <SectionTitle title={"Formação & Certificações"} marginBottom={MarginBottom.MB12}/>
             <div className="grid  gap-6  md:grid-cols-2 lg:grid-cols-3">

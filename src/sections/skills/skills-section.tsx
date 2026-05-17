@@ -11,7 +11,7 @@ const groupIcons: Record<string, LucideIcon> = {
 
 export function SkillsSection() {
     return (
-        <Section id="tecnologias" className="bg-muted/20">
+        <Section id="tecnologias" tone="dark">
             <h2 className="mb-12 text-3xl font-bold md:text-4xl">
                 Tecnologias & Ferramentas
             </h2>

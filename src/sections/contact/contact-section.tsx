@@ -13,7 +13,7 @@ const contactIcons: Record<string, LucideIcon | typeof GithubIcon> = {
 
 export function ContactSection() {
     return (
-        <Section id="contato" className="bg-gradient-to-b from-muted/20 to-background">
+        <Section id="contato" tone="dark">
             <div className="mx-auto max-w-5xl">
                 <div className="mx-auto max-w-3xl text-center">
                     <span className="mb-4 inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">

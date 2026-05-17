@@ -106,7 +106,6 @@ Imagens e arquivos públicos usados pela interface.
 
 - LinkedIn: https://www.linkedin.com/in/devjbarbosa/
 - GitHub: https://github.com/JoaoSBarbosa
-- Email: dev.joaobarbosa@gmail.com
 
 ## Licença
 

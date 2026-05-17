@@ -37,6 +37,31 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Section banding (light theme) */
+  --band-dark-background: #111111;
+  --band-dark-foreground: #ffffff;
+  --band-dark-muted: rgba(255, 255, 255, 0.06);
+  --band-dark-muted-foreground: rgba(255, 255, 255, 0.78);
+  --band-dark-border: rgba(255, 255, 255, 0.14);
+  --band-dark-card: rgba(255, 255, 255, 0.04);
+  --band-dark-card-foreground: #ffffff;
+  --band-dark-primary: #a99bff;
+  --band-dark-primary-foreground: #111111;
+  --band-dark-accent: rgba(255, 255, 255, 0.08);
+  --band-dark-accent-foreground: #ffffff;
+
+  --band-light-background: #ffffff;
+  --band-light-foreground: #111111;
+  --band-light-muted: #f3f3f5;
+  --band-light-muted-foreground: #717182;
+  --band-light-border: rgba(0, 0, 0, 0.1);
+  --band-light-card: #ffffff;
+  --band-light-card-foreground: oklch(0.145 0 0);
+  --band-light-primary: #3e27b3;
+  --band-light-primary-foreground: #ffffff;
+  --band-light-accent: #f0edff;
+  --band-light-accent-foreground: #3e27b3;
 }
 
 .dark {
@@ -67,11 +92,67 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* Section banding (dark theme) */
+  --band-dark-background: #0f0f10;
+  --band-dark-foreground: #f7f7f8;
+  --band-dark-muted: rgba(255, 255, 255, 0.06);
+  --band-dark-muted-foreground: rgba(255, 255, 255, 0.78);
+  --band-dark-border: rgba(255, 255, 255, 0.08);
+  --band-dark-card: #161618;
+  --band-dark-card-foreground: #f7f7f8;
+  --band-dark-primary: #a99bff;
+  --band-dark-primary-foreground: #0f0f10;
+  --band-dark-accent: rgba(255, 255, 255, 0.08);
+  --band-dark-accent-foreground: #f7f7f8;
+
+  --band-light-background: #1a1a1d;
+  --band-light-foreground: #f7f7f8;
+  --band-light-muted: #222226;
+  --band-light-muted-foreground: rgba(255, 255, 255, 0.72);
+  --band-light-border: rgba(255, 255, 255, 0.08);
+  --band-light-card: #1a1a1d;
+  --band-light-card-foreground: #f7f7f8;
+  --band-light-primary: #a99bff;
+  --band-light-primary-foreground: #0f0f10;
+  --band-light-accent: rgba(255, 255, 255, 0.08);
+  --band-light-accent-foreground: #f7f7f8;
 }
 
 * {
   border-color: var(--border);
   outline-color: var(--ring);
+}
+
+/* Alternate “bands” without breaking theme toggle: these override the palette locally. */
+.section-band-dark {
+  --background: var(--band-dark-background);
+  --foreground: var(--band-dark-foreground);
+  --muted: var(--band-dark-muted);
+  --muted-foreground: var(--band-dark-muted-foreground);
+  --border: var(--band-dark-border);
+  --card: var(--band-dark-card);
+  --card-foreground: var(--band-dark-card-foreground);
+  --primary: var(--band-dark-primary);
+  --primary-foreground: var(--band-dark-primary-foreground);
+  --accent: var(--band-dark-accent);
+  --accent-foreground: var(--band-dark-accent-foreground);
+  --ring: var(--band-dark-primary);
+}
+
+.section-band-light {
+  --background: var(--band-light-background);
+  --foreground: var(--band-light-foreground);
+  --muted: var(--band-light-muted);
+  --muted-foreground: var(--band-light-muted-foreground);
+  --border: var(--band-light-border);
+  --card: var(--band-light-card);
+  --card-foreground: var(--band-light-card-foreground);
+  --primary: var(--band-light-primary);
+  --primary-foreground: var(--band-light-primary-foreground);
+  --accent: var(--band-light-accent);
+  --accent-foreground: var(--band-light-accent-foreground);
+  --ring: var(--band-light-primary);
 }
 
 body {

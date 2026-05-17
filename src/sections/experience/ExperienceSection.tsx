@@ -5,7 +5,7 @@ import {MarginBottom, SectionTitle} from "../../shared/layout/section/title";
 
 export function ExperienceSection() {
     return (
-        <Section id="experiencia" className="bg-muted/20">
+        <Section id="experiencia" tone="dark">
 
             <SectionTitle
                 title={"Experiência Profissional"}
